@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tiêu đề trang - Refactored</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Prevent scrollbars on the main page */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        #header {
+            height: 150px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #header img {
+            width: 100%;
+            height: 150px;
+            object-fit: fill;
+        }
+
+        #main-body {
+            display: flex;
+            flex: 1; /* Takes up remaining height */
+            overflow: hidden;
+        }
+
+        #sidebar {
+            width: 20%;
+            height: 100%;
+            background-image: url('./images/Wall2.jpg');
+            background-size: cover;
+            background-position: center;
+            border-right: 1px solid #ccc;
+            overflow-y: auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        #sidebar h2 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        #sidebar ul {
+            margin-top: 0;
+        }
+
+        #sidebar a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        #sidebar a:hover {
+            text-decoration: underline;
+        }
+
+        #content {
+            flex: 1;
+            height: 100%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div id="header">
+            <img src="./images/LOGO.JPG" alt="Header Logo">
+        </div>
+
+        <!-- Main Body Section -->
+        <div id="main-body">
+            <!-- Sidebar Section (originally left.html) -->
+            <div id="sidebar">
+                <h2><a href="./infor/TCE.html" target="main_content">Homepage</a></h2>
+                <h2><a href="./infor/Philosophy.html" target="main_content">Our Philosophy</a></h2>
+                <h2><a href="./infor/Lessons.html" target="main_content">Climbing Sessions</a></h2>
+                <h2>Tours</h2>
+                <ul>
+                    <li><a href="./infor/Grepon.html" target="main_content">Peptit Grepon</a></li>
+                    <li><a href="./infor/Lumpy.html" target="main_content">Lumpy Ridge</a></li>
+                    <li><a href="./infor/NFace.html" target="main_content">North Face</a></li>
+                    <li><a href="./infor/NFace.html" target="main_content">North Face</a></li>
+                    <li><a href="./infor/Kieners.html" target="main_content">Kiener's</a></li>
+                    <li><a href="./infor/Diamond.html" target="main_content">The Diamond</a></li>
+                    <li><a href="./infor/Eldorado.html" target="main_content">Elorado</a></li>
+                </ul>
+                <h2>Staff</h2>
+            </div>
+
+            <!-- Content Section -->
+            <div id="content">
+                <iframe name="main_content" src="./infor/TCE.html" title="Content Area"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
