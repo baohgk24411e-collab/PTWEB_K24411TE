@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineClassifield</title>
+    <style>
+        body {
+            background-color:paleturquoise
+        }
+        
+        h1 {
+            color: red;
+        }
+
+        hr {
+            border-color: black;
+            margin: 5px 0 15px 0;
+        }
+
+        form {
+            width: 700px;
+            margin: 20px auto;
+            padding: 15px 25px;
+            border: 1px solid blue;
+        }
+
+        .opt-gr label{
+            display: inline-block;
+            width: 230px;
+            margin-bottom: 5px;
+        }
+
+        textarea {
+            width: 90%;
+            height: 25px;
+            margin-top: 5px;
+        }
+
+        .btn-group {
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        .btn-group img {
+            width: 60px;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+    </style>
+    <script>
+        function searchAction () {
+            alert("Đang thực hiện quá trình tìm kiếm. Vui lòng chờ trong giây lát!")
+        }
+
+        function helpAction () {
+            window.open("Help.html", "_blank")
+        }
+
+        function cancelAction() {
+            if (confirm("Bạn có chắc muốn xóa toàn bộ dữ liệu không?")) {
+                document.getElementById("OnlineClassifield").reset();
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="OnlineClassifield">
+<!-- Tiêu đề -->
+        <h1>Online Classifieds Search Form</h1>
+
+    <hr>
+<!-- Nội dung -->
+        <div>
+            <b>1) Search for a classified in the following sections:</b><br><br>
+            <div class="opt-gr">
+                <label><input type="radio" name="section"> Employment</label>
+                <label><input type="radio" name="section"> Personal</label><br>
+                <label><input type="radio" name="section"> For Sale</label>
+                <label><input type="radio" name="section"> Miscellaneous</label><br>
+                <label><input type="radio" name="section"> Housing</label>
+                <label><input type="radio" name="section"> All of the above</label>
+            </div>
+        </div><br>
+
+        <div>
+            <b>2) Search the following publications:</b><br><br>
+            <div class="opt-gr">
+                <label><input type="checkbox"> Midwest Times</label>
+                <label><input type="checkbox"> Modern News</label>
+                <label><input type="checkbox"> Employment Today</label><br>
+                <label><input type="checkbox"> Great Lakes Classifieds</label>
+                <label><input type="checkbox"> Middleton Daily</label>
+                <label><input type="checkbox"> Cashtown Daily News</label>
+            </div>
+        </div><br>
+
+        <div>
+            <b>3) From to</b>
+            <input type="date" placeholder="mm/dd/yy">
+            <b>to</b>
+            <input type="date" placeholder="mm/dd/yy">
+        </div><br>
+
+        <div>
+            <b>4) Enter a few keywords to describe the classified.</b><br><br>
+            <textarea></textarea>
+        </div><br>
+
+        <div>
+            <b>5) Click one of the options below:</b><br><br>
+            <img src="../bai_49/img_49/Search.gif" alt="Search" onclick="searchAction()">
+            <img src="../bai_49/img_49/Help.gif" alt="Help" onclick="helpAction()">
+            <img src="../bai_49/img_49/Cancel.gif" alt="Cancel" onclick="cancelAction()">
+        </div>
+    </form>
+</body>
+</html>
