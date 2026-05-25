@@ -1,0 +1,172 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+    </head>
+    <body style="background-color:rgb(166, 209, 255)">
+        <div style="text-align: center"><img src="images/Jackson.gif"></div>
+        <h1 style="text-align:center">Registration Form</h1>
+        <h4 style="text-align:center">Register your Jackson Electronics product here</h4>
+        <form name="registration_form" id="regForm" method="post" action="#">
+        <table>
+            <tr>
+                <table text-align="center" style="margin: auto;">
+                    <tr>
+                        <td>
+                            First Name:
+                        </td>
+                        <td>
+                            <input type="text" id="firstName" name="first_name">
+                        </td>
+                        <td>
+                            Last Name:
+                        </td>
+                        <td colspan="3">
+                            <input type="text" id="lastName" name="last_name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Address #1:
+                        </td>
+                        <td colspan="3">
+                            <input type="text" id="address1" name="address">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Address #2:
+                        </td>
+                        <td colspan="3">
+                            <input type="text" id="address2" name="address2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            City:
+                        </td>
+                        <td>
+                            <input type="text" id="city" name="city">
+                        </td>
+                        <td>
+                            State:
+                        </td>
+                        <td>
+                            <input type="text" id="state" name="state">
+                        </td>
+                        <td>
+                            Zip Code:
+                        </td>
+                        <td>
+                            <input type="text" id="zipCode" name="zip_code">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Country:
+                        </td>
+                        <td>
+                            <input type="text" id="country" name="country">
+                        </td>
+                    </tr>
+                </table>
+            </tr>
+            <tr>
+            <hr style="border: 1px solid black; width: 50%; margin: auto;">
+            </tr>
+            <tr>
+                <table text-align="center" style="margin: auto;">
+                    <tr>
+                        <td>
+                            Product:
+                        </td>
+                        <td colspan="5">
+                            <input type="text" id="product" name="product">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Date Purchased:
+                        </td>
+                        <td colspan="5">
+                            <input type="text" id="datePurchased" name="date_purchased">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Serial #:
+                        </td>
+                        <td colspan="5">
+                            <input type="text" id="serialNumber" name="serial_number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Used for:
+                        </td>
+                        <td colspan="2">
+                            <input type="radio" name="used_for" value="Home">Home
+                        </td>
+                        <td colspan="2">
+                            <input type="radio" name="used_for" value="Educational">Educational Instituion
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            
+                        </td>
+                        <td colspan="2">
+                            <input type="radio" name="used_for" value="Business">Business
+                        </td> 
+                        <td colspan="2">
+                            <input type="radio" name="used_for" value="Other">Other
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            
+                        </td>
+                        <td colspan="2">
+                            <input type="radio" name="used_for" value="Goverment">Goverment
+                        </td> 
+                        <td colspan="2">
+                            
+                        </td>
+                    </tr>
+                </table>
+            </tr>
+            <tr>
+                <hr style="border: 1px solid black; width: 50%; margin: auto;">
+            </tr>
+            <tr>
+                <table text-align="center" style="margin: auto;">
+                    <tr>
+                        <td rowspan="2">
+                            Comments
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" rowspan="2">
+                            <textarea id="comments" name="comments" rows="5" cols="50"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </tr>
+            <tr>
+                <hr style="border: 1px solid black; width: 50%; margin: auto;">
+            </tr>
+            <tr>
+                <table text-align="center" style="margin: auto;">
+                    <tr>
+                        <td style="padding: 10px;">
+                            <input type="submit" value="Click to Register" style="padding: 10px 20px; cursor: pointer;">
+                        </td>
+                        <td style="padding: 10px;">
+                            <input type="reset" value="Click to cancel" style="padding: 10px 20px; cursor: pointer;">
+                        </td>
+                    </tr>
+                </table>
+            </tr>
+        </table>
+        </form>
+    </body>
+</html>
