@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Contact Us</title>
+    </head>
+    <body>
+        <h1>Contact the editorial office</h1>
+        <form action="result.html" method="get" target="_blank">
+            <table>
+                <tr>
+                    <td colspan="2">
+                        Full name
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="text" name="fullname" id="name"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email
+                    </td>
+                    <td>
+                        Send to
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="email" name="email" id="email"/>
+                    </td>
+                    <td>
+                        <select name="send" id="send">
+                            <option>Editorial board</option>
+                            <option>News Department</option>
+                            <option>Board of Perspectives</option>
+                            <option>World Board</option>
+                            <option>Business Department</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        Title
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="text" name="title" id="title"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        Content
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="text" name="content" id="content" style="width: 100%; height: 100px;"/>
+                    </td>
+                </tr>
+            </table>
+            <button type="submit" onclick="send()">
+                Send
+            </button>
+        </form>
+    </body>
+</html>
