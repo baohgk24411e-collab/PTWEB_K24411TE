@@ -1,12 +1,92 @@
 <html>
     <head>
-        <title>Tiêu đề trang</title>
+        <title>Travel Expense Report</title>
+        <style>
+            body {
+                background-color: rgb(182, 255, 255);
+                font-family: Arial, sans-serif;
+                padding: 20px;
+            }
+            .header {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .header img {
+                max-width: 100%;
+                height: auto;
+            }
+            h2 {
+                margin-top: 0;
+                margin-bottom: 15px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            td {
+                padding: 12px;
+                vertical-align: top;
+            }
+            input[type="text"],
+            input[type="date"],
+            input[type="number"],
+            select,
+            textarea {
+                padding: 6px 8px;
+                border: 1px solid #999;
+                border-radius: 3px;
+                font-family: Arial, sans-serif;
+                min-width: 150px;
+            }
+            textarea {
+                resize: vertical;
+            }
+            .button-group {
+                padding-top: 15px;
+            }
+            input[type="submit"],
+            input[type="reset"] {
+                padding: 10px 20px;
+                margin-right: 10px;
+                cursor: pointer;
+                border: 1px solid #999;
+                border-radius: 3px;
+                background-color: #FFB6C1;
+            }
+            input[type="submit"]:hover,
+            input[type="reset"]:hover {
+                background-color: #FF99AC;
+            }
+            .expense-table {
+                width: 100%;
+                border: 1px solid #000;
+                margin-top: 10px;
+            }
+            .expense-table td {
+                padding: 8px;
+                border: 1px solid #000;
+            }
+            .expense-header {
+                font-weight: bold;
+                text-align: center;
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+            .section-label {
+                font-weight: normal;
+                min-width: 180px;
+                padding-right: 20px;
+            }
+            .footer-text {
+                margin-top: 20px;
+                font-size: 14px;
+            }
+        </style>
     </head>
-    <body style="background-color:rgb(182, 255, 255)">
-        <div style="text-align: center">
-            <img src="DeLong.jpg" alt="Demo Image">
+    <body>
+        <div class="header">
+            <img src="DeLong.jpg" alt="DeLong Enterprises Logo">
         </div>
-        <h2 style="text-align: left;">Travel Expense Report</h2>
+        <h2>Travel Expense Report</h2>
         <hr>
         <form name="expenseForm" method="post" action="#">
             <table>
