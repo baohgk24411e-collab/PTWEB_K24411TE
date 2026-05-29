@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+    </head>
+    <body style="background-color:rgb(182, 255, 255)">
+        <div style="text-align: center">
+            <img src="DeLong.jpg" alt="Demo Image">
+        </div>
+        <h2 style="text-align: left;">Travel Expense Report</h2>
+        <hr>
+        <form name="expenseForm" method="post" action="#">
+            <table>
+                <tr>
+                    <td>
+                        1. First Name:
+                    </td>
+                    <td>
+                        <input type="text" id="firstName" name="first_name">
+                    </td>
+                    <td>
+                        Last Name:
+                    </td>
+                    <td>
+                        <input type="text" id="lastName" name="last_name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        2. Social Security Number:
+                    </td>
+                    <td>
+                        <input type="text" id="ssn" name="ssn">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        3. Department:
+                    </td>
+                    <td>
+                       <select name="department">
+                            <option value="sales">Sales</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="engineering">Engineering</option>
+                            <option value="hr">Human Resources</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        4. Describe the purpose of your trip:
+                    </td>
+                    <td>
+                        <textarea name="trip_purpose" rows="4" cols="50"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        5. Itemize your travel expenses:
+                    </td>
+                    <td>
+                        <table border="1" cellpadding="3" cellspacing="0">
+                            <tr>
+                                <td style="font-weight: bold; text-align: center;">
+                                    Date:
+                                </td>
+                                <td style="font-weight: bold; text-align: center;">
+                                    Description:
+                                </td>
+                                <td style="font-weight: bold; text-align: center;">
+                                    Category
+                                </td>
+                                <td style="font-weight: bold; text-align: center;">
+                                    Amount
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="date" name="expense_date">
+                                </td>
+                                <td>
+                                    <input type="text" name="expense_description">
+                                </td>
+                                <td>
+                                    <select name="expense_category">
+                                        <option value="transportation">Transportation</option>
+                                        <option value="lodging">Lodging</option>
+                                        <option value="meals">Meals</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="number" name="expense_amount" step="0.01">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="date" name="expense_date">
+                                </td>
+                                <td>
+                                    <input type="text" name="expense_description">
+                                </td>
+                                <td>
+                                    <select name="expense_category">
+                                        <option value="transportation">Transportation</option>
+                                        <option value="lodging">Lodging</option>
+                                        <option value="meals">Meals</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="number" name="expense_amount" step="0.01">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="date" name="expense_date">
+                                </td>
+                                <td>
+                                    <input type="text" name="expense_description">
+                                </td>
+                                <td>
+                                    <select name="expense_category">
+                                        <option value="transportation">Transportation</option>
+                                        <option value="lodging">Lodging</option>
+                                        <option value="meals">Meals</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="number" name="expense_amount" step="0.01">
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        6. Have you submitted your receipts?
+                    </td>
+                    <td>
+                        <label><input type="radio" name="receipts_submitted" value="yes"> Yes</label>
+                        <label><input type="radio" name="receipts_submitted" value="no"> No</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 5px;">
+                        <input type="submit" value="Submit travel expenses" style="padding: 10px 20px; cursor: pointer;">
+                        <input type="reset" value="Reset Form" style="padding: 10px 20px; cursor: pointer;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Questions? Contact Debbie Larson in Accounting (ext 2150).
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
