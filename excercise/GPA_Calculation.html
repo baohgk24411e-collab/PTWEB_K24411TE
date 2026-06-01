@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <title>GPA Calculator</title>
+        <script>
+            function calculateGPA(course) {
+                if(course === 'course1') 
+                {
+                    qt = eval(qt1.value);
+                    gk = eval(gk1.value);
+                    ck = eval(ck1.value);
+                    gpa = qt * 0.30 + gk * 0.20 + ck * 0.50;
+                    formulaText.innerHTML = qt + " × 30% + " + gk + " × 20% + " + ck + " × 50%";
+                    gpaResult.innerHTML = gpa;
+                    resultDiv.style.display = 'block';
+                }
+                else if(course === 'course2') 
+                {
+                    qt = eval(qt2.value);
+                    gk = eval(gk2.value);
+                    ck = eval(ck2.value);
+                    gpa = qt * 0.25 + gk * 0.25 + ck * 0.50;
+                    formulaText.innerHTML = qt + " × 25% + " + gk + " × 25% + " + ck + " × 50%";
+                    gpaResult.innerHTML = gpa;
+                    resultDiv.style.display = 'block';
+                }
+                else if(course === 'course3') 
+                {
+                    qt = eval(qt3.value);
+                    gk = eval(gk3.value);
+                    ck = eval(ck3.value);
+                    t = eval(t3.value);
+                    gpa = qt * 0.15 + gk * 0.20 + ck * 0.50 + t * 0.15;
+                    formulaText.innerHTML = qt + " × 15% + " + gk + " × 20% + " + ck + " × 50% + " + t + " × 15%";
+                    gpaResult.innerHTML = gpa;
+                    resultDiv.style.display = 'block';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>GPA Calculation</h1>
+        
+        <table>
+            <tr>
+                <td>Select Course:</td>
+                <td>
+                    <select onchange="
+                        div_course1.style.display='none';
+                        div_course2.style.display='none';
+                        div_course3.style.display='none';
+                        if(this.value=='course1') div_course1.style.display='block';
+                        if(this.value=='course2') div_course2.style.display='block';
+                        if(this.value=='course3') div_course3.style.display='block';
+                    ">
+                        <option value="">-- Chọn môn học --</option>
+                        <option value="course1">Course 1</option>
+                        <option value="course2">Course 2</option>
+                        <option value="course3">Course 3</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <div id="div_course1" style="display: none;">
+            <h3>Course 1</h3>
+            <table>
+                <tr>
+                    <td>Điểm Quá Trình (30%):</td>
+                    <td><input type="number" id="qt1"/></td>
+                </tr>
+                <tr>
+                    <td>Điểm Giữa Kỳ (20%):</td>
+                    <td><input type="number" id="gk1"/></td>
+                </tr>
+                <tr>
+                    <td>Điểm Cuối Kỳ (50%):</td>
+                    <td><input type="number" id="ck1"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" value="Tính GPA" onclick="calculateGPA('course1')"/></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="div_course2" style="display: none;">
+            <h3>Course 2</h3>
+            <table>
+                <tr>
+                    <td>Điểm Quá Trình (25%):</td>
+                    <td><input type="number" id="qt2"/></td>
+                </tr>
+                <tr>
+                    <td>Điểm Giữa Kỳ (25%):</td>
+                    <td><input type="number" id="gk2"/></td>
+                </tr>
+                <tr>
+                    <td>Điểm Cuối Kỳ (50%):</td>
+                    <td><input type="number" id="ck2"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" value="Tính GPA" onclick="calculateGPA('course2')"/></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="div_course3" style="display: none;">
+            <h3>Course 3</h3>
+            <table>
+                <tr>
+                    <td>Điểm Quá Trình (15%):</td>
+                    <td><input type="number" id="qt3"/></td>
+                </tr>
+                <tr>
+                    <td>Điểm Giữa Kỳ (20%):</td>
+                    <td><input type="number" id="gk3"/></td>
+                </tr>
+                <tr>
+                    <td>Điểm Cuối Kỳ (50%):</td>
+                    <td><input type="number" id="ck3"/></td>
+                </tr>
+                <tr>
+                    <td>Điểm Thực Hành (15%):</td>
+                    <td><input type="number" id="t3"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" value="Tính GPA" onclick="calculateGPA('course3')"/></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="resultDiv" style="display: none;">
+            <h2>Kết Quả</h2>
+            <table>
+                <tr>
+                    <td>Công thức:</td>
+                    <td id="formulaText"></td>
+                </tr>
+                <tr>
+                    <td>GPA:</td>
+                    <td id="gpaResult"></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
