@@ -40,16 +40,22 @@
                 a = MyForm.a.value
                 b = MyForm.b.value
                 c = MyForm.c.value
-                delta = b * b - 4 * a * c
-                if (delta < 0) {
-                    result.innerHTML = "No solution"
-                } else if (delta == 0) {
-                    x = -b / (2 * a)
-                    result.innerHTML = "Only one root: x = " + x
+                if (a == 0 && b == 0 && c == 0) {
+                    result.innerHTML = "Invalid: a, b, c cannot all be 0"
+                } else if (a == 0) {
+                    result.innerHTML = "Invalid: a cannot be 0 for quadratic equation"
                 } else {
-                    x1 = (-b + Math.sqrt(delta)) / (2 * a)
-                    x2 = (-b - Math.sqrt(delta)) / (2 * a)
-                    result.innerHTML = "Two distinct roots: x1 = " + x1 + ", x2 = " + x2
+                    delta = b * b - 4 * a * c
+                    if (delta < 0) {
+                        result.innerHTML = "No solution"
+                    } else if (delta == 0) {
+                        x = -b / (2 * a)
+                        result.innerHTML = "Only one root: x = " + x
+                    } else {
+                        x1 = (-b + Math.sqrt(delta)) / (2 * a)
+                        x2 = (-b - Math.sqrt(delta)) / (2 * a)
+                        result.innerHTML = "Two distinct roots: x1 = " + x1 + ", x2 = " + x2
+                    }
                 }
             }
             function ClearForm() {
