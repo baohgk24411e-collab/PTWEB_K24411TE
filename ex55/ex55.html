@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+    </head>
+    <body>
+        <form name="MyForm">
+            <table border="1">
+                <tr>
+                    <td colspan="2" style="text-align: center; background-color: cyan">
+                        <h3>The Quadratic Equation</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="30%">a :</td>
+                    <td><input type="number" name="a"></td>
+                </tr>
+                <tr>
+                    <td width="30%">b :</td>
+                    <td><input type="number" name="b"></td>
+                </tr>
+                <tr>
+                    <td width="30%">c :</td>
+                    <td><input type="number" name="c"></td>
+                </tr>
+                <tr>
+                    <td width="30%">Result :</td>
+                    <td id="result"></td>
+                </tr>
+                <tr>
+                    <td width="30%"></td>
+                    <td>
+                        <button type="button" onclick="FindSolution()">Find Solution</button>
+                        <button type="button" onclick="ClearForm()">Clear</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <script>
+            function FindSolution() {
+                a = MyForm.a.value
+                b = MyForm.b.value
+                c = MyForm.c.value
+                delta = b * b - 4 * a * c
+                if (delta < 0) {
+                    result.innerHTML = "No solution"
+                } else if (delta == 0) {
+                    x = -b / (2 * a)
+                    result.innerHTML = "Only one root: x = " + x
+                } else {
+                    x1 = (-b + Math.sqrt(delta)) / (2 * a)
+                    x2 = (-b - Math.sqrt(delta)) / (2 * a)
+                    result.innerHTML = "Two distinct roots: x1 = " + x1 + ", x2 = " + x2
+                }
+            }
+            function ClearForm() {
+                MyForm.reset()
+                result.innerHTML = ""
+            }
+        </script>
+    </body>
+</html>
