@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <script>
+            function MAX() {
+                var a=MyForm.a.value
+                var b=MyForm.b.value
+                var c=MyForm.c.value
+                result.innerHTML = Math.max(a,b,c)
+            }
+            function MIN() {
+                var a=MyForm.a.value
+                var b=MyForm.b.value
+                var c=MyForm.c.value
+                result.innerHTML = Math.min(a,b,c)
+            }
+            function Sin() {
+                var a=MyForm.a.value
+                result.innerHTML = Math.sin(a)
+            }
+            function Cos() {
+                var a=MyForm.a.value
+                result.innerHTML = Math.cos(a)
+            }
+            function amub() {
+                var a=MyForm.a.value
+                var b=MyForm.b.value
+                result.innerHTML = Math.pow(a,b)
+            }
+        </script>
+    </head>
+    <body>
+        <form name="MyForm">
+            <table border="1">
+                <tr>
+                    <td>a:</td>
+                    <td><input type="number" name="a"></td>
+                </tr>
+                <tr>
+                    <td>b:</td>
+                    <td><input type="number" name="b"></td>
+                </tr>
+                <tr>
+                    <td>c:</td>
+                    <td><input type="number" name="c"></td>
+                </tr>
+                <tr>
+                    <td>Result:</td>
+                    <td id="result"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="button" onclick="MAX()">MAX</button>
+                        <button type="button" onclick="MIN()">MIN</button>
+                        <button type="button" onclick="Sin()">Sin(a)</button>
+                        <button type="button" onclick="Cos()">Cos(a)</button>
+                        <button type="button" onclick="amub()">a^b</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
