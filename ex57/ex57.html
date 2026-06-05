@@ -1,18 +1,6 @@
 <html>
     <head>
         <title>Tiêu đề trang</title>
-        <script>
-            function CalculateTotal() {
-                quantity1 = MyForm.quantity1.value
-                quantity2 = MyForm.quantity2.value
-                quantity3 = MyForm.quantity3.value
-                total = quantity1 * 19.95 + quantity2 * 29.95 + quantity3 * 39.95
-                MyForm.total.value = total.toFixed(2) + "$"
-                MyForm.item1.value = quantity1 * 19.95 > 0 ?  + (quantity1 * 19.95).toFixed(2) + "$" : ""
-                MyForm.item2.value = quantity2 * 29.95 > 0 ?  + (quantity2 * 29.95).toFixed(2) + "$" : ""
-                MyForm.item3.value = quantity3 * 39.95 > 0 ?  + (quantity3 * 39.95).toFixed(2) + "$" : ""
-            }
-        </script>
     </head>
     <body>
         <form name="MyForm">
@@ -29,22 +17,22 @@
                 <tr>
                     <td>C112</td>
                     <td>Mouse</td>
-                    <td>19.95$</td>
-                    <td><input type="number" name="quantity1" min="0" value="0"></td>
+                    <td id="price1">19.95$</td>
+                    <td><input type="number" name="quantity1" min="0" value="0" onchange="UpdateItem(1)"></td>
                     <td><input type="text" name="item1" readonly></td>
                 </tr>
                 <tr>
                     <td>B124</td>
                     <td>Keyboard US</td>
-                    <td>29.95$</td>
-                    <td><input type="number" name="quantity2" min="0" value="0"></td>
+                    <td id="price2">29.95$</td>
+                    <td><input type="number" name="quantity2" min="0" value="0" onchange="UpdateItem(2)"></td>
                     <td><input type="text" name="item2" readonly></td>
                 </tr>
                 <tr>
                     <td>U125</td>
                     <td>USB KingMax</td>
-                    <td>39.95$</td>
-                    <td><input type="number" name="quantity3" min="0" value="0"></td>
+                    <td id="price3">39.95$</td>
+                    <td><input type="number" name="quantity3" min="0" value="0" onchange="UpdateItem(3)"></td>
                     <td><input type="text" name="item3" readonly></td>
                 </tr>
                 <tr>
@@ -65,5 +53,22 @@
 
             </table>
         </form>
+        <script>
+            function UpdateItem(itemNum) {
+                quantity = MyForm['quantity' + itemNum].value
+                priceElement = document.getElementById('price' + itemNum)
+                priceVal = parseFloat(priceElement.innerHTML) || 0
+                itemValue = quantity * priceVal
+                MyForm['item' + itemNum].value = itemValue > 0 ? itemValue.toFixed(2) + "$" : ""
+            }
+            
+            function CalculateTotal() {
+                item1Val = parseFloat(MyForm.item1.value) || 0
+                item2Val = parseFloat(MyForm.item2.value) || 0
+                item3Val = parseFloat(MyForm.item3.value) || 0
+                total = item1Val + item2Val + item3Val
+                MyForm.total.value = total.toFixed(2) + "$"
+            }
+        </script>
     </body>
 </html>
