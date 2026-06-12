@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Node Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <table border="0" class="control-table">
+        <tr>
+            <td><button class="btn-node" onclick="addNode()">Add Node</button></td>
+            <td class="lbl">Content</td>
+            <td><input type="text" id="addContent" class="input-content"></td>
+            <td class="lbl">Position</td>
+            <td><input type="text" id="addPos" class="input-pos"></td>
+        </tr>
+        <tr>
+            <td><button class="btn-node" onclick="removeNode()">Remove Node</button></td>
+            <td></td>
+            <td></td>
+            <td class="lbl">Position</td>
+            <td><input type="text" id="removePos" class="input-pos"></td>
+        </tr>
+        <tr>
+            <td><button class="btn-node" onclick="modifyNode()">Modify Node</button></td>
+            <td class="lbl">New Content</td>
+            <td><input type="text" id="modifyContent" class="input-content"></td>
+            <td class="lbl">Position</td>
+            <td><input type="text" id="modifyPos" class="input-pos"></td>
+        </tr>
+    </table>
+
+    <h2 class="node-title">Web Node</h2>
+    <ul id="webList">
+        <li>Data base</li>
+        <li>Web1</li>
+        <li>Web2</li>
+    </ul>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

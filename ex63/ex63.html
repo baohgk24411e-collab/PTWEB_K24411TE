@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Member Registration</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Member Registration</h1>
+    <hr>
+    
+    <form id="regForm">
+        <table>
+            <tr>
+                <td>Name(*)</td>
+                <td><input type="text" id="txtName"></td>
+            </tr>
+            <tr>
+                <td>Birthday(*)</td>
+                <td>
+                    Day:
+                    <select id="selDay"></select>
+                    Month:
+                    <select id="selMonth"></select>
+                    Year:
+                    <select id="selYear"></select>
+                </td>
+            </tr>
+            <tr>
+                <td>Gender(*)</td>
+                <td>
+                    <input type="radio" name="gender" id="genderMan" value="Man" checked> <label for="genderMan">Man</label>
+                    <input type="radio" name="gender" id="genderWoman" value="Woman"> <label for="genderWoman">Woman</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Email(*)</td>
+                <td><input type="text" id="txtEmail"></td>
+            </tr>
+        </table>
+
+        <p>Your favorite:</p>
+        <input type="checkbox" name="hobbies" id="hobbyShopping" value="Shopping"> <label for="hobbyShopping">Shopping</label><br>
+        <input type="checkbox" name="hobbies" id="hobbyTourism" value="Tourism"> <label for="hobbyTourism">Tourism</label><br>
+        <input type="checkbox" name="hobbies" id="hobbyChat" value="Chat"> <label for="hobbyChat">Chat</label><br>
+        <input type="checkbox" name="hobbies" id="hobbyRead" value="Read a book"> <label for="hobbyRead">Read a book</label><br>
+        <input type="checkbox" name="hobbies" id="hobbyMusic" value="Listening to music"> <label for="hobbyMusic">Listening to music</label><br>
+
+        <p>Your favorite color:</p>
+        <input type="radio" name="favColor" id="colorBlue" value="Blue" checked> <label for="colorBlue" style="background-color: blue; color: white;">Blue</label><br>
+        <input type="radio" name="favColor" id="colorRed" value="Red"> <label for="colorRed" style="background-color: red; color: white;">Red</label><br>
+        <input type="radio" name="favColor" id="colorYellow" value="Yellow"> <label for="colorYellow" style="background-color: yellow; color: black;">Yellow</label><br>
+        <input type="radio" name="favColor" id="colorGreen" value="Green"> <label for="colorGreen" style="background-color: green; color: white;">Green</label><br>
+        <input type="radio" name="favColor" id="colorViolet" value="Violet"> <label for="colorViolet" style="background-color: violet; color: white;">Violet</label><br>
+        
+        <br>
+        <button type="button" id="btnRegister">Sign up</button>
+        <button type="button" id="btnNext">Next</button>
+    </form>
+
+    <br><br>
+    <table id="resultTable" border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Birthday</th>
+                <th>Hobbies</th>
+                <th>Colors</th>
+            </tr>
+        </thead>
+        <tbody id="resultBody">
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
