@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>CD Catalog</title>
+        <script src="js/mainjs.js"></script>
+    </head>
+    <body>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th colspan="2">
+                        CD Catalog
+                    </th>
+                </tr>
+            </thead>
+            <thead>
+                <tr>
+                    <td onclick="sortByColumn(0)">
+                        Artist
+                    </td>
+                    <td onclick="sortByColumn(1)">
+                        Title
+                    </td>
+                </tr>
+            </thead>
+            <tbody id="bodycd">
+
+            </tbody>
+        </table>
+        <script>
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var xmlDoc = this.responseXML;
+                    bodycd = document.getElementById("bodycd")
+                    load_cd_from_xml(xmlDoc, bodycd)
+                }
+            };
+            xmlhttp.open("GET", "dataset/cd_catalog.xml", true);
+            xmlhttp.send();
+        </script>
+    </body>
+</html>
