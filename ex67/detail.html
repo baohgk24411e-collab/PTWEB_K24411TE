@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Student Information</title>
+        <style>
+            table {
+                border-collapse: collapse;
+            }
+            
+            table, tr, td {
+                border: 1px solid black;
+            }
+            tr:first-child td {
+                background-color: #90EE90;
+                color: black;
+                padding: 10px;
+                font-weight: bold;
+                text-align: center;
+            }
+            
+            tr td:first-child {
+                background-color: #f0f0f0;
+                font-weight: bold;
+                padding: 10px;
+            }
+            
+            tr td:last-child {
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td colspan="2">Student Information</td>
+            </tr>
+            <tr>
+                <td>Student ID:</td>
+                <td id="displayId"></td>
+            </tr>
+            <tr>
+                <td>Student Name:</td>
+                <td id="displayName"></td>
+            </tr>
+            <tr>
+                <td>Birthday:</td>
+                <td id="displayBirthday"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td id="displayGender"></td>
+            </tr>
+        </table>
+        
+        <script>
+            // Get data from URL parameter
+            var urlParams = new URLSearchParams(window.location.search);
+            var data = urlParams.get('data');
+            
+            if(data) {
+                var student = JSON.parse(decodeURIComponent(data));
+                document.getElementById("displayId").innerHTML = student.id;
+                document.getElementById("displayName").innerHTML = student.name;
+                document.getElementById("displayBirthday").innerHTML = student.birthday;
+                document.getElementById("displayGender").innerHTML = student.gender;
+            }
+        </script>
+    </body>
+</html>

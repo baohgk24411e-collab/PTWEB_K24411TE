@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <link rel="stylesheet" href="css/maincss.css">
+        <script src="dataset/students.js"></script>
+        <script src="js/mainjs.js"></script>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="4">
+                        List of Students
+                    </th>
+                </tr>
+            </thead>
+            <thead>
+                <tr>
+                    <td onclick="sortByColumn(0)">
+                        Student ID
+                    </td>
+                    <td onclick="sortByColumn(1)">
+                        Student Name
+                    </td>
+                    <td onclick="sortByColumn(2)">
+                        Birthday
+                    </td>
+                    <td onclick="sortByColumn(3)">
+                        Gender
+                    </td>
+                </tr>
+            </thead>
+            <tbody id="bodystudent">
+
+            </tbody>
+        </table>
+        <script>
+            bodystudent=document.getElementById("bodystudent")
+            load_students_from_xml(students,bodystudent)
+        </script>
+    </body>
+</html>
