@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Exercise 69 - AJAX</title>
+        <script src="js/mainjs.js"></script>
+        <style>
+            table, tr, td, th {
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 8px;
+            }
+            thead {
+                background-color: #4CAF50;
+                color: white;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Employee List</h2>
+        
+        <label>Title:</label>
+        <select id="titleSelect" onchange="showEmployee()">
+            <option value="">-- Select Title --</option>
+        </select>
+        
+        <br><br>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Employee Name</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody id="bodyEmployee">
+            </tbody>
+        </table>
+        
+        <script>
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    xmlDoc = this.responseXML;
+                    loadTitles(xmlDoc);
+                }
+            };
+            xmlhttp.open("GET", "employees.xml", true);
+            xmlhttp.send();
+        </script>
+    </body>
+</html>
