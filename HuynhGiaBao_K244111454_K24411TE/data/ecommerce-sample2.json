@@ -1,0 +1,333 @@
+{
+  "categories": [
+    {
+      "categoryId": "CAT001",
+      "categoryName": "Phones & Tablets",
+      "description": "New generation smartphones and tablets"
+    },
+    {
+      "categoryId": "CAT002",
+      "categoryName": "Computers & Laptops",
+      "description": "Office laptops, gaming laptops, and desktops"
+    },
+    {
+      "categoryId": "CAT003",
+      "categoryName": "Tech Accessories",
+      "description": "Headphones, charging cables, keyboards, computer mice"
+    },
+    {
+      "categoryId": "CAT004",
+      "categoryName": "Audio Equipment",
+      "description": "Bluetooth speakers, home speakers, noise-canceling headphones"
+    },
+    {
+      "categoryId": "CAT005",
+      "categoryName": "Smart Home",
+      "description": "Robot vacuums, smart lights, security cameras"
+    }
+  ],
+  "customers": [
+    {
+      "customerId": "CUST001",
+      "fullName": "John Smith",
+      "email": "john.smith@example.com",
+      "phone": "07911 123456",
+      "address": "123 Baker Street, London, NW1 6XE, United Kingdom",
+      "password": "123"
+    },
+    {
+      "customerId": "CUST002",
+      "fullName": "Emily Johnson",
+      "email": "emily.j.work@example.com",
+      "phone": "07911 654321",
+      "address": "456 Queen Street, Edinburgh, EH2 3NQ, United Kingdom",
+      "password": "123"
+    },
+    {
+      "customerId": "CUST003",
+      "fullName": "Michael Davis",
+      "email": "michael.davis@gmail.com",
+      "phone": "07911 987654",
+      "address": "789 King's Road, Manchester, M3 4LG, United Kingdom",
+      "password": "123"
+    },
+    {
+      "customerId": "CUST004",
+      "fullName": "Sarah Wilson",
+      "email": "sarah.wilson@yahoo.com",
+      "phone": "07911 555666",
+      "address": "12 High Street, Cardiff, CF10 1AX, United Kingdom",
+      "password": "123"
+    },
+    {
+      "customerId": "CUST005",
+      "fullName": "Robert Taylor",
+      "email": "robert.taylor@outlook.com",
+      "phone": "07911 777888",
+      "address": "98 Oxford Road, Birmingham, B1 5CC, United Kingdom",
+      "password": "123"
+    }
+  ],
+  "employees": [
+    {
+      "employeeId": "EMP001",
+      "fullName": "James Anderson",
+      "position": "Sales Executive",
+      "department": "Sales Team A",
+      "email": "janderson@company.com",
+      "password": "123"
+    },
+    {
+      "employeeId": "EMP002",
+      "fullName": "Jessica Miller",
+      "position": "Sales Manager",
+      "department": "Sales Management",
+      "email": "jmiller@company.com",
+      "password": "123"
+    },
+    {
+      "employeeId": "EMP003",
+      "fullName": "William Thomas",
+      "position": "Sales Executive",
+      "department": "Sales Team B",
+      "email": "wthomas@company.com",
+      "password": "123"
+    },
+    {
+      "employeeId": "EMP004",
+      "fullName": "Olivia Martin",
+      "position": "Customer Support Specialist",
+      "department": "Customer Support",
+      "email": "omartin@company.com",
+      "password": "123"
+    }
+  ],
+  "products": [
+    {
+      "productId": "PROD001",
+      "productName": "iPhone 15 Pro Max 256GB",
+      "categoryId": "CAT001",
+      "price": 29500000,
+      "stock": 45,
+      "imageUrl": "https://tranduythanh.com/pictures/h1.png",
+      "isActive": true
+    },
+    {
+      "productId": "PROD002",
+      "productName": "MacBook Pro M3 14-inch",
+      "categoryId": "CAT002",
+      "price": 39990000,
+      "stock": 18,
+      "imageUrl": "https://tranduythanh.com/pictures/h2.png",
+      "isActive": true
+    },
+    {
+      "productId": "PROD003",
+      "productName": "AirPods Pro Gen 2 Headphones",
+      "categoryId": "CAT003",
+      "price": 5800000,
+      "stock": 85,
+      "imageUrl": "https://tranduythanh.com/pictures/h3.png",
+      "isActive": true
+    },
+    {
+      "productId": "PROD004",
+      "productName": "iPad Air 6 M2 Wifi 128GB",
+      "categoryId": "CAT001",
+      "price": 16200000,
+      "stock": 30,
+      "imageUrl": "https://tranduythanh.com/pictures/h4.png",
+      "isActive": true
+    },
+    {
+      "productId": "PROD005",
+      "productName": "ASUS ROG Strix G16 Laptop",
+      "categoryId": "CAT002",
+      "price": 34500000,
+      "stock": 12,
+      "imageUrl": "https://tranduythanh.com/pictures/h5.png",
+      "isActive": true
+    },
+    {
+      "productId": "PROD006",
+      "productName": "Logitech MX Master 3S Wireless Mouse",
+      "categoryId": "CAT003",
+      "price": 2450000,
+      "stock": 60,
+      "imageUrl": "https://tranduythanh.com/pictures/h6.png",
+      "isActive": true
+    },
+    {
+      "productId": "PROD007",
+      "productName": "JBL Charge 5 Bluetooth Speaker",
+      "categoryId": "CAT004",
+      "price": 3950000,
+      "stock": 40,
+      "imageUrl": "https://tranduythanh.com/pictures/h7.png",
+      "isActive": true
+    },
+    {
+      "productId": "PROD008",
+      "productName": "Sony WH-1000XM5 Headphones",
+      "categoryId": "CAT004",
+      "price": 6990000,
+      "stock": 22,
+      "imageUrl": "https://tranduythanh.com/pictures/h8.png",
+      "isActive": true
+    },
+    {
+      "productId": "PROD009",
+      "productName": "Ecovacs Deebot T20 Robot Vacuum",
+      "categoryId": "CAT005",
+      "price": 13900000,
+      "stock": 15,
+      "imageUrl": "https://tranduythanh.com/pictures/h9.png",
+      "isActive": true
+    },
+    {
+      "productId": "PROD010",
+      "productName": "Anker GaN 65W Fast Charging Cable",
+      "categoryId": "CAT003",
+      "price": 650000,
+      "stock": 150,
+      "imageUrl": "https://tranduythanh.com/pictures/h10.png",
+      "isActive": true
+    }
+  ],
+  "orders": [
+    {
+      "orderId": "ORD1001",
+      "customerId": "CUST001",
+      "employeeId": "EMP001",
+      "orderDate": "2026-06-15T08:30:00Z",
+      "status": "Completed",
+      "totalAmount": 35950000
+    },
+    {
+      "orderId": "ORD1002",
+      "customerId": "CUST002",
+      "employeeId": "EMP001",
+      "orderDate": "2026-06-18T14:15:00Z",
+      "status": "Completed",
+      "totalAmount": 39990000
+    },
+    {
+      "orderId": "ORD1003",
+      "customerId": "CUST003",
+      "employeeId": "EMP003",
+      "orderDate": "2026-06-20T10:00:00Z",
+      "status": "Shipping",
+      "totalAmount": 19300000
+    },
+    {
+      "orderId": "ORD1004",
+      "customerId": "CUST004",
+      "employeeId": "EMP003",
+      "orderDate": "2026-06-22T09:45:00Z",
+      "status": "Processing",
+      "totalAmount": 44440000
+    },
+    {
+      "orderId": "ORD1005",
+      "customerId": "CUST001",
+      "employeeId": "EMP001",
+      "orderDate": "2026-06-23T16:20:00Z",
+      "status": "Completed",
+      "totalAmount": 3100000
+    },
+    {
+      "orderId": "ORD1006",
+      "customerId": "CUST005",
+      "employeeId": "EMP002",
+      "orderDate": "2026-06-24T11:05:00Z",
+      "status": "Pending",
+      "totalAmount": 13900000
+    }
+  ],
+  "orderDetails": [
+    {
+      "orderDetailId": "OD1001_1",
+      "orderId": "ORD1001",
+      "productId": "PROD001",
+      "quantity": 1,
+      "unitPrice": 29500000
+    },
+    {
+      "orderDetailId": "OD1001_2",
+      "orderId": "ORD1001",
+      "productId": "PROD003",
+      "quantity": 1,
+      "unitPrice": 5800000
+    },
+    {
+      "orderDetailId": "OD1001_3",
+      "orderId": "ORD1001",
+      "productId": "PROD010",
+      "quantity": 1,
+      "unitPrice": 650000
+    },
+    {
+      "orderDetailId": "OD1002_1",
+      "orderId": "ORD1002",
+      "productId": "PROD002",
+      "quantity": 1,
+      "unitPrice": 39990000
+    },
+    {
+      "orderDetailId": "OD1003_1",
+      "orderId": "ORD1003",
+      "productId": "PROD004",
+      "quantity": 1,
+      "unitPrice": 16200000
+    },
+    {
+      "orderDetailId": "OD1003_2",
+      "orderId": "ORD1003",
+      "productId": "PROD006",
+      "quantity": 1,
+      "unitPrice": 2450000
+    },
+    {
+      "orderDetailId": "OD1004_1",
+      "orderId": "ORD1004",
+      "productId": "PROD005",
+      "quantity": 1,
+      "unitPrice": 34500000
+    },
+    {
+      "orderDetailId": "OD1004_2",
+      "orderId": "ORD1004",
+      "productId": "PROD008",
+      "quantity": 1,
+      "unitPrice": 6990000
+    },
+    {
+      "orderDetailId": "OD1004_3",
+      "orderId": "ORD1004",
+      "productId": "PROD007",
+      "quantity": 1,
+      "unitPrice": 2950000
+    },
+    {
+      "orderDetailId": "OD1005_1",
+      "orderId": "ORD1005",
+      "productId": "PROD006",
+      "quantity": 1,
+      "unitPrice": 2450000
+    },
+    {
+      "orderDetailId": "OD1005_2",
+      "orderId": "ORD1005",
+      "productId": "PROD010",
+      "quantity": 1,
+      "unitPrice": 650000
+    },
+    {
+      "orderDetailId": "OD1006_1",
+      "orderId": "ORD1006",
+      "productId": "PROD009",
+      "quantity": 1,
+      "unitPrice": 13900000
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eHaHa E-Commerce Website - BW07</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- HEADER LAYOUT -->
+        <header>
+            <h1>EHAHA E-COMMERCE PORTAL</h1>
+            <p>Course: Business Web Development | Faculty of Information Systems</p>
+        </header>
+
+        <!-- PART A: MENU NAVIGATION -->
+        <nav class="part-a" id="part-a-navbar">
+            <!-- 1. About me -->
+            <div class="nav-item active">
+                <a href="#" class="nav-link" id="nav-about">About me</a>
+            </div>
+
+            <!-- 2. API and External Dropdown -->
+            <div class="nav-item">
+                <a href="#" class="nav-link">API and External ▾</a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item" id="sub-gold">Gold Price API</a>
+                    <a href="#" class="dropdown-item" id="sub-education">E-Commerce Education</a>
+                    <a href="#" class="dropdown-item" id="sub-parser">MyUEL Parser</a>
+                </div>
+            </div>
+
+            <!-- 3. Shopping Dropdown -->
+            <div class="nav-item">
+                <a href="#" class="nav-link">Shopping ▾</a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item" id="sub-products">Products</a>
+                    <a href="#" class="dropdown-item" id="sub-cart">My Cart</a>
+                </div>
+            </div>
+
+            <!-- 4. An Icon / Settings Dropdown -->
+            <div class="nav-item">
+                <a href="#" class="nav-link" id="nav-icon-link">🌐 Control Panel ▾</a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item" id="sub-login">Login/Logout</a>
+                    <a href="#" class="dropdown-item" id="sub-info">My Info</a>
+                    <a href="#" class="dropdown-item" id="sub-admin">Administrator</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- PART B: DYNAMIC CONTENT PANEL -->
+        <main class="part-b">
+            <div id="part-b-container">
+                <!-- Inner views injected here dynamically by js/main.js -->
+            </div>
+        </main>
+
+        <!-- PART C: FOOTER CLOCK (BOUNCING MARQUEE) -->
+        <footer class="part-c">
+            <div class="marquee-container">
+                <span class="marquee-text" id="clock-text">Initializing digital clock...</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Link Main JavaScript Logic -->
+    <script src="js/main.js"></script>
+</body>
+</html>

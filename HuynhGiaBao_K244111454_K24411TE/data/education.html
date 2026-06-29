@@ -1,0 +1,1908 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	MyUEL - Trang chủ
+</title> 
+    <!-- Mới thêm -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /><link href="/Modules/UIS/js/ui/themes/default/easyui.css" rel="stylesheet" type="text/css" /><link href="/Modules/UIS/css/Myspace.css" rel="stylesheet" />
+	<script src="/Modules/UIS/js/jquery-1.7.1.js"></script>
+    <script src="/Modules/UIS/js/ui/jquery.easyui.min.js"></script>
+     <script src="/Modules/UIS/js/Function.js"></script>
+	<script src="/Modules/UIS/js/Service.js"></script>
+    <!-- --> 
+    <link href="/Resources/ImagesPortal/inside.css" rel="stylesheet" type="text/css" /><link href="/CSS/main_uel.css?ver=0" rel="stylesheet" type="text/css" /><link href="/CSS/online_uel_detail.css?ver=1" rel="stylesheet" type="text/css" /><link href="/CSS/show_img.css" rel="stylesheet" type="text/css" />
+    <script src="/Scripts/Common.js" type="text/javascript"></script>
+    <script src="Scripts/PagingContent.js" type="text/javascript"></script>
+    <link href="Lightbox/resource/lightbox.css" rel="stylesheet" type="text/css" />
+    <script src="Lightbox/resource/lightbox_plus_min.js" type="text/javascript"></script>
+    <!--script src="/Scripts/Jquery_1.9.1.js" type="text/javascript"></script -->
+    <script language="javascript" type="text/javascript">
+
+
+        function SearchProcess(event) {
+            if (event.keyCode == 13) {
+                OnSearch(document.getElementById('txtSearchArticle').value);
+                return false;
+            }
+            return true;
+        }
+        function OnSearch(query) {
+            PSCPortal.Services.CMS.SearchAndPaging(query, currentPage, OnSearchSuccess, OnSearchFailed);
+        }
+
+        function OnSearchSuccess(results, context, methodName) {
+            var position = results.indexOf('_');
+            totalRecords = results.substring(0, position);
+            results = results.substring(position + 1);
+            LoadContentAndPaging(results);
+        }
+        function OnSearchFailed(results, context, methodName) {
+        }
+    </script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-00F6V2NZ4E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-00F6V2NZ4E');
+</script>
+<link href="/WebResource.axd?d=S8kX8NaEwQGn3-iLaEQ23z1gVd5-HxaCrbCaORd8R_UG3UbnfF5yhoprgD4HMXJK9UJ7fdvF7H9yA4Evr6l_RR9DmEHdJoSs230dXbKOhk0kvBNyTa7ykMnxAKYq9WgoK_PpZ6wia3e9yRqpT9VghQ2&amp;t=637031068030000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=Jml7ppFZEif_lyub20D8fx-PmGVCRgWhE48xl73LJqlO2cuvIbPYN0PTJ1RxXAxFhHtJ3xD0FO4U41gv1pCJ9z4HDv_V-w_XrS8-KEsT3B0lS5IiTaAElbN795damKLns5f1Q3f3ZKRhpukeCKAcJw3a96zrGc2zEPn-u1mld7I1&amp;t=637031068030000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /></head>
+
+<body class="body">
+    <div class="vien"></div>
+    <form name="form1" method="post" action="./Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&amp;OlogyID=411E&amp;DepartmentID=05&amp;GraduateLevelID=DH&amp;StudyTypeID=CQ" id="form1">
+<input type="hidden" name="RadScriptManager1_TSM" id="RadScriptManager1_TSM" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPaA8FDzhkZWQ1ZjU1MzE4YjI5ORgLBSJjdGwxMSRkdGxTZW1lc3RlciRjdGwwMyRncnZIb2NwaGFuDzwrAAwBCAIBZAUiY3RsMTEkZHRsU2VtZXN0ZXIkY3RsMDYkZ3J2SG9jcGhhbg88KwAMAQgCAWQFImN0bDExJGR0bFNlbWVzdGVyJGN0bDA0JGdydkhvY3BoYW4PPCsADAEIAgFkBSJjdGwxMSRkdGxTZW1lc3RlciRjdGwwNSRncnZIb2NwaGFuDzwrAAwBCAIBZAUiY3RsMTEkZHRsU2VtZXN0ZXIkY3RsMDAkZ3J2SG9jcGhhbg88KwAMAQgCAWQFImN0bDExJGR0bFNlbWVzdGVyJGN0bDAxJGdydkhvY3BoYW4PPCsADAEIAgFkBSJjdGwxMSRkdGxTZW1lc3RlciRjdGwwNyRncnZIb2NwaGFuDzwrAAwBCAIBZAUiY3RsMTEkZHRsU2VtZXN0ZXIkY3RsMDIkZ3J2SG9jcGhhbg88KwAMAQgCAWQFImN0bDExJGR0bFNlbWVzdGVyJGN0bDA4JGdydkhvY3BoYW4PPCsADAEIAgFkBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQURUmFkV2luZG93TWFuYWdlcjEFImN0bDExJGR0bFNlbWVzdGVyJGN0bDA5JGdydkhvY3BoYW4PPCsADAEIAgFkyapKJnQWoKh3t5d3NrUOL9jMzEwrrYDf2aUvmbTbqRE=" />
+
+
+<script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=RadScriptManager1_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3a%3a9ddf364d-d65d-4f01-a69e-8b015049e026%3aea597d4b%3bTelerik.Web.UI%2c+Version%3d2011.1.315.35%2c+Culture%3dneutral%2c+PublicKeyToken%3d121fae78165ba3d4%3a%3ae4ca4719-c559-4761-8501-9be20bbda1fe%3a16e4e7cd%3a874f8ea2%3af7645509%3a24ee1bba%3af46195d3%3a19620875%3a490a9d4e%3abd8f85e4" type="text/javascript"></script>
+<script src="Modules/UIS/Services/Portlets_SV.asmx/js" type="text/javascript"></script>
+<script src="Services/PortletProxy.asmx/js" type="text/javascript"></script>
+<script src="Services/ModuleProxy.asmx/js" type="text/javascript"></script>
+<script src="Services/CMS.asmx/js" type="text/javascript"></script>
+<script src="Services/WeatherService.asmx/js" type="text/javascript"></script>
+<script src="Services/HRMService.asmx/js" type="text/javascript"></script>
+<script src="Services/PortletService.asmx/js" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdADH2rF6JEu2mpKk5Le8tD28WjGo6TEqWE4trYrNPr0tYPiWSOQMp3ozE3Ho1atELJstJkyvyN3gh/oGP0JM/s4LGgbDcSDwBt16Unb5qOOEjxvwBBUcIJqPpJIB9/wM0+87TFV15e26AuQdR3+56LKoQKv1xBCFIr0AIKcdtGK+h3vcO+JCRCCivR3xDU66ofisBpjouuGaMoDt2Y9AQ1tvjKeNU+cv4H3iLKn1DpzwuXND62sCaDoVx1t8V9LNZCN0G6vZ3WX97eaBtmvWXrpZg3UciUSf5Uk5yHPE9C7f3eJiVqbXo7avrEt7heFzahrbTF6v0r3yH1uXnVFrNzIN/55yR+9wFXUV419QSH1f29GSWdRxo4yg6XE83kQNCHmV7FUVoWk4IPgj8uuuRF97qDnMpzDCWtWXBYd25M8QhjL6Tjh/tJ0Eds9L6WzjwAAX0YafE5uK6Oy6+VFHoRTMrkA0c6VaPQa5CWfSZkZFXNMpkHvbFdgMrtXRp7X/9DPuKYEb/yzWyg75dllVCPbTQ3Uf8HgpRQvSJDqMEIvmDVp997f5S1ffxF+9XzK24WJam9/4KFvHuoekEybr1sg6sky4kyKCN5Hb3UPH0IT3VYwNuxe/b/mvbATKTtjnV8fyjBDAFm2ZfuPT9AjaJnal/nBHhot25sYtUfS98zvdKttgOjFr/UxcHgD8BIqwsrDCtPmgOSPstNXxUxsNye7TuaWQvS7c/fsQu6nRzx6ShRxgiPBxoeA1CGXeeD50urdGdYmpfTwwmNK1i3zf78rRNoj1fP51VS/tZq+ORFzeMiPxNu9KwNRxmduBo2SuYhTXQXYtYrVKp67eUlia3mwytXoouyvXGQdSVAZdg/4Swq76f2wQ/mO7v9wBRpck3TO/KeOZSw6hg17OIzOBDNhTspkM1rimZxWR1L/waVQN3TsOvQpB2r/R8Nsu9x3QZvfrR/NMBG0P4zR0hEN5d6QcQ2RCAusmrbGWL0JPGxu2pGDZWn/MjF1RnVNayTns6+maK0UTEgtBayvRuM4tjEzfOTr/JnJVqxgbBYtmGowb+HdW2mEy/pUxVhCVD/5LhrN0=" />
+        <div id="RadWindowManager1" style="display:none;">
+	<!-- 2011.1.315.35 --><div id="RadWindowManager1_alerttemplate" style="display:none;">
+		<div class="rwDialogPopup radalert">			
+			<div class="rwDialogText">
+			{1}				
+			</div>
+			
+			<div>
+				<a  onclick="$find('{0}').close(true);"
+				class="rwPopupButton" href="javascript:void(0);">
+					<span class="rwOuterSpan">
+						<span class="rwInnerSpan">##LOC[OK]##</span>
+					</span>
+				</a>				
+			</div>
+		</div>
+		</div><div id="RadWindowManager1_prompttemplate" style="display:none;">
+		 <div class="rwDialogPopup radprompt">			
+			    <div class="rwDialogText">
+			    {1}				
+			    </div>		
+			    <div>
+				    <script type="text/javascript">
+				    function RadWindowprompt_detectenter(id, ev, input)
+				    {							
+					    if (!ev) ev = window.event;                
+					    if (ev.keyCode == 13)
+					    {															        
+					        var but = input.parentNode.parentNode.getElementsByTagName("A")[0];					        
+					        if (but)
+						    {							
+							    if (but.click) but.click();
+							    else if (but.onclick)
+							    {
+							        but.focus(); var click = but.onclick; but.onclick = null; if (click) click.call(but);							 
+							    }
+						    }
+					       return false;
+					    } 
+					    else return true;
+				    }	 
+				    </script>
+				    <input title="Eneter Value" onkeydown="return RadWindowprompt_detectenter('{0}', event, this);" type="text"  class="rwDialogInput" value="{2}" />
+			    </div>
+			    <div>
+				    <a onclick="$find('{0}').close(this.parentNode.parentNode.getElementsByTagName('input')[0].value);"				
+					    class="rwPopupButton" href="javascript:void(0);" ><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				    <a onclick="$find('{0}').close(null);" class="rwPopupButton"  href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			    </div>
+		    </div>				       
+		</div><div id="RadWindowManager1_confirmtemplate" style="display:none;">
+		<div class="rwDialogPopup radconfirm">			
+			<div class="rwDialogText">
+			{1}				
+			</div>						
+			<div>
+				<a onclick="$find('{0}').close(true);"  class="rwPopupButton" href="javascript:void(0);" ><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				<a onclick="$find('{0}').close(false);" class="rwPopupButton"  href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			</div>
+		</div>		
+		</div><input id="RadWindowManager1_ClientState" name="RadWindowManager1_ClientState" type="hidden" />
+</div>
+        
+        <div class="page">
+            <table cellspacing="0" cellpadding="0" border="0" bgcolor="White">
+	<tr>
+		<td colspan="1"><div id="pnTop">
+			<div id="pnTopDisplay" style="width:1000px;float:left;padding:0px 0px 30px 0px;">
+				<div id='portlet_00d551fb-b7b1-4343-ac0f-46cb9c489a18' style="width:795px;float:left"><div>
+					<div class="logo"><a href="http://myuel.uel.edu.vn"><img alt="" src="/Resources/Images/logo_uel.png" /></a></div>
+
+				</div></div><div id='portlet_9d60ec61-61df-4116-8079-47607226dbd1' style="width:205px;float:left"><div>
+					<div class="search"><input type="text" value="T&igrave;m kiếm..." /></div>
+
+				</div></div><div id='portlet_898e6622-bbb1-4766-8968-f1754a978744' style="width:1000px;float:left"><div>
+					<div class="line"><img alt="" src="/Resources/Images/line_logo.png" /></div>
+
+				</div></div>
+			</div>
+		</div></td>
+	</tr><tr valign="top">
+		<td><div id="pnCenter">
+			<div id="pnCenterDisplay" style="width:1000px;float:left">
+				
+<!--container-->
+  <div class="container">
+    <!--Panel lef-->
+<style>
+    td
+    {
+        padding:0px;
+    }
+</style>
+      <link href="/Modules/UIS/css/MenuAccordion.css" rel="stylesheet" />
+      <script>
+          $(document).ready(function () {
+              $('#nav > li > a').click(function () {
+                  if ($(this).attr('class') != 'active') {
+                      $('#nav li ul').slideUp();
+                      $(this).next().slideToggle();
+                      $('#nav li a').removeClass('active');
+                      $(this).addClass('active');
+                  }
+              });
+          });
+      </script>
+ <div class="panelleft1">
+    	<!--Phan PanelBarmenu1-->
+    	<div class="PanelBarMenu">
+        	<div class="tile_menubar">
+            	
+                <span class="text_menubar"><img class="cc" src="/Modules/UIS/images/congcu.png"/><a href="#">Ngành</a></span>
+                
+      		</div>
+           
+            <div class="tienich">
+                
+                        <ul id="nav">
+                            <li><a  href="javascript:void()" class='active'>Đại học - Chính quy</a>
+                                <ul style='display: block'>
+                                    
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=7310101&DepartmentID=01&GraduateLevelID=DH&StudyTypeID=CQ">Kinh tế</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=401&DepartmentID=01&GraduateLevelID=DH&StudyTypeID=CQ">Kinh tế học</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=401C&DepartmentID=01&GraduateLevelID=DH&StudyTypeID=CQ">Kinh tế học chất lượng cao</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=403&DepartmentID=01&GraduateLevelID=DH&StudyTypeID=CQ">Kinh tế và Quản lý công</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=403C&DepartmentID=01&GraduateLevelID=DH&StudyTypeID=CQ">Kinh tế và Quản lý công Chất lượng cao</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=408&DepartmentID=02&GraduateLevelID=DH&StudyTypeID=CQ">Kinh doanh quốc tế</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=7340120&DepartmentID=02&GraduateLevelID=DH&StudyTypeID=CQ">Kinh doanh quốc tế</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=408E&DepartmentID=02&GraduateLevelID=DH&StudyTypeID=CQ">Kinh doanh quốc tế (Tiếng Anh)</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=408C&DepartmentID=02&GraduateLevelID=DH&StudyTypeID=CQ">Kinh doanh quốc tế Chất lượng cao</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=408CA&DepartmentID=02&GraduateLevelID=DH&StudyTypeID=CQ">Kinh doanh quốc tế Chất lượng cao bằng tiếng Anh</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=402&DepartmentID=02&GraduateLevelID=DH&StudyTypeID=CQ">Kinh tế đối ngoại</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=402C&DepartmentID=02&GraduateLevelID=DH&StudyTypeID=CQ">Kinh tế đối ngoại Chất lượng cao</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=402CA&DepartmentID=02&GraduateLevelID=DH&StudyTypeID=CQ">Kinh tế đối ngoại Chất lượng cao bằng tiếng Anh</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=7310106&DepartmentID=02&GraduateLevelID=DH&StudyTypeID=CQ">Kinh tế quốc tế</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=414&DepartmentID=03&GraduateLevelID=DH&StudyTypeID=CQ">Công nghệ tài chính</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=7340205&DepartmentID=03&GraduateLevelID=DH&StudyTypeID=CQ">Công nghệ tài chính</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=414H&DepartmentID=03&GraduateLevelID=DH&StudyTypeID=CQ">Công nghệ tài chính (Chương trình Co-operative Education)</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=414C&DepartmentID=03&GraduateLevelID=DH&StudyTypeID=CQ">Công nghệ tài chính Chất lượng cao</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=414C*&DepartmentID=03&GraduateLevelID=DH&StudyTypeID=CQ">Công nghệ tài chính Chất lượng cao</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=412&DepartmentID=03&GraduateLevelID=DH&StudyTypeID=CQ">Ngân hàng</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=404&DepartmentID=03&GraduateLevelID=DH&StudyTypeID=CQ">Tài chính - Ngân hàng</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=7340201&DepartmentID=03&GraduateLevelID=DH&StudyTypeID=CQ">Tài chính - Ngân hàng</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=404E&DepartmentID=03&GraduateLevelID=DH&StudyTypeID=CQ">Tài chính - Ngân hàng (Tiếng Anh)</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=404C&DepartmentID=03&GraduateLevelID=DH&StudyTypeID=CQ">Tài chính - Ngân hàng Chất lượng cao</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=404CA&DepartmentID=03&GraduateLevelID=DH&StudyTypeID=CQ">Tài chính - Ngân hàng Chất lượng cao bằng tiếng Anh</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=405&DepartmentID=04&GraduateLevelID=DH&StudyTypeID=CQ">Kế toán</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=7340301&DepartmentID=04&GraduateLevelID=DH&StudyTypeID=CQ">Kế toán</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=405E&DepartmentID=04&GraduateLevelID=DH&StudyTypeID=CQ">Kế toán (Tiếng Anh) (Tích hợp chứng chỉ quốc tế ICAEW)</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=405C&DepartmentID=04&GraduateLevelID=DH&StudyTypeID=CQ">Kế toán Chất lượng cao</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=405CA&DepartmentID=04&GraduateLevelID=DH&StudyTypeID=CQ">Kế toán Chất lượng cao bằng tiếng Anh</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=409&DepartmentID=04&GraduateLevelID=DH&StudyTypeID=CQ">Kiểm toán</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=7340302&DepartmentID=04&GraduateLevelID=DH&StudyTypeID=CQ">Kiểm toán</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=409C&DepartmentID=04&GraduateLevelID=DH&StudyTypeID=CQ">Kiểm toán Chất lượng cao</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=406&DepartmentID=05&GraduateLevelID=DH&StudyTypeID=CQ">Hệ thống thông tin quản lý</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=7340405&DepartmentID=05&GraduateLevelID=DH&StudyTypeID=CQ">Hệ thống thông tin quản lý</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=406H&DepartmentID=05&GraduateLevelID=DH&StudyTypeID=CQ">Hệ thống thông tin quản lý (Chương trình Co-operative Education)</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=406C&DepartmentID=05&GraduateLevelID=DH&StudyTypeID=CQ">Hệ thống thông tin quản lý Chất lượng cao</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=416&DepartmentID=05&GraduateLevelID=DH&StudyTypeID=CQ">Kinh doanh số và Trí tuệ nhân tạo</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=416C&DepartmentID=05&GraduateLevelID=DH&StudyTypeID=CQ">Kinh doanh số và Trí tuệ nhân tạo Chất lượng cao</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=411&DepartmentID=05&GraduateLevelID=DH&StudyTypeID=CQ">Thương mại điện tử</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=411*&DepartmentID=05&GraduateLevelID=DH&StudyTypeID=CQ">Thương mại điện tử</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=7340122&DepartmentID=05&GraduateLevelID=DH&StudyTypeID=CQ">Thương mại điện tử</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=411E&DepartmentID=05&GraduateLevelID=DH&StudyTypeID=CQ">Thương mại điện tử (Tiếng Anh)</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=411C&DepartmentID=05&GraduateLevelID=DH&StudyTypeID=CQ">Thương mại điện tử Chất lượng cao</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=411CA&DepartmentID=05&GraduateLevelID=DH&StudyTypeID=CQ">Thương mại điện tử Chất lượng cao bằng tiếng Anh</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=417&DepartmentID=06&GraduateLevelID=DH&StudyTypeID=CQ">Digital Marketing</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=410&DepartmentID=06&GraduateLevelID=DH&StudyTypeID=CQ">Marketing</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=7340115&DepartmentID=06&GraduateLevelID=DH&StudyTypeID=CQ">Marketing</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=410E&DepartmentID=06&GraduateLevelID=DH&StudyTypeID=CQ">Marketing (Tiếng Anh)</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=410C&DepartmentID=06&GraduateLevelID=DH&StudyTypeID=CQ">Marketing Chất lượng cao</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=410CA&DepartmentID=06&GraduateLevelID=DH&StudyTypeID=CQ">Marketing Chất lượng cao bằng tiếng Anh</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=418&DepartmentID=06&GraduateLevelID=DH&StudyTypeID=CQ">Quản lý công</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=7340403&DepartmentID=06&GraduateLevelID=DH&StudyTypeID=CQ">Quản lý công</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=415&DepartmentID=06&GraduateLevelID=DH&StudyTypeID=CQ">Quản trị du lịch và lữ hành</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=407&DepartmentID=06&GraduateLevelID=DH&StudyTypeID=CQ">Quản trị kinh doanh</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=7340101&DepartmentID=06&GraduateLevelID=DH&StudyTypeID=CQ">Quản trị kinh doanh</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=407E&DepartmentID=06&GraduateLevelID=DH&StudyTypeID=CQ">Quản trị kinh doanh (Tiếng Anh)</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=407C&DepartmentID=06&GraduateLevelID=DH&StudyTypeID=CQ">Quản trị kinh doanh Chất lượng cao</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=407CA&DepartmentID=06&GraduateLevelID=DH&StudyTypeID=CQ">Quản trị kinh doanh Chất lượng cao bằng tiếng Anh</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=7380101&DepartmentID=07&GraduateLevelID=DH&StudyTypeID=CQ">Luật</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=503&DepartmentID=07&GraduateLevelID=DH&StudyTypeID=CQ">Luật Dân sự</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=503C&DepartmentID=07&GraduateLevelID=DH&StudyTypeID=CQ">Luật Dân sự Chất lượng cao</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=503CA&DepartmentID=07&GraduateLevelID=DH&StudyTypeID=CQ">Luật dân sự Chất lượng cao bằng tiếng Anh</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=504&DepartmentID=07&GraduateLevelID=DH&StudyTypeID=CQ">Luật Tài chính - Ngân hàng</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=504*&DepartmentID=07&GraduateLevelID=DH&StudyTypeID=CQ">Luật Tài chính - Ngân hàng</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=504C&DepartmentID=07&GraduateLevelID=DH&StudyTypeID=CQ">Luật Tài chính - Ngân hàng chất lượng cao</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=504CP&DepartmentID=07&GraduateLevelID=DH&StudyTypeID=CQ">Luật Tài chính - Ngân hàng Chất lượng cao tăng cường tiếng Pháp</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=505&DepartmentID=07&GraduateLevelID=DH&StudyTypeID=CQ">Luật và Chính sách công</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=501&DepartmentID=08&GraduateLevelID=DH&StudyTypeID=CQ">Luật kinh doanh</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=501C&DepartmentID=08&GraduateLevelID=DH&StudyTypeID=CQ">Luật kinh doanh Chất lượng cao</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=7380107&DepartmentID=08&GraduateLevelID=DH&StudyTypeID=CQ">Luật Kinh tế</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=502&DepartmentID=08&GraduateLevelID=DH&StudyTypeID=CQ">Luật thương mại quốc tế</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=502E&DepartmentID=08&GraduateLevelID=DH&StudyTypeID=CQ">Luật Thương mại quốc tế (Tiếng Anh)</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=502C&DepartmentID=08&GraduateLevelID=DH&StudyTypeID=CQ">Luật thương mại quốc tế Chất lượng cao</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=502CA&DepartmentID=08&GraduateLevelID=DH&StudyTypeID=CQ">Luật thương mại quốc tế Chất lượng cao bằng tiếng Anh</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=419&DepartmentID=11&GraduateLevelID=DH&StudyTypeID=CQ">Phân tích dữ liệu</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=7310108&DepartmentID=11&GraduateLevelID=DH&StudyTypeID=CQ">Toán kinh tế</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=413&DepartmentID=11&GraduateLevelID=DH&StudyTypeID=CQ">Toán ứng dụng trong kinh tế, quản trị và tài chính</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=413E&DepartmentID=11&GraduateLevelID=DH&StudyTypeID=CQ">Toán ứng dụng trong Kinh tế, Quản trị và Tài chính (Tiếng Anh)</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=413C&DepartmentID=11&GraduateLevelID=DH&StudyTypeID=CQ">Toán ứng dụng trong kinh tế, quản trị và tài chính Chất lượng cao</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=413CA&DepartmentID=11&GraduateLevelID=DH&StudyTypeID=CQ">Toán ứng dụng trong kinh tế, quản trị và tài chính chất lượng cao bằng tiếng Anh</a></li>
+                                        
+                                </ul>
+
+                            </li>
+                        </ul>
+                    
+                        <ul id="nav">
+                            <li><a  href="javascript:void()" class=''>Đại học - Đào tạo từ xa</a>
+                                <ul style='display: none'>
+                                    
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=7340301&DepartmentID=04&GraduateLevelID=DH&StudyTypeID=DTTX">Kế toán</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=7340122&DepartmentID=05&GraduateLevelID=DH&StudyTypeID=DTTX">Thương mại điện tử</a></li>
+                                        
+                                </ul>
+
+                            </li>
+                        </ul>
+                    
+                        <ul id="nav">
+                            <li><a  href="javascript:void()" class=''>Đại học - Liên thông</a>
+                                <ul style='display: none'>
+                                    
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=402&DepartmentID=02&GraduateLevelID=DH&StudyTypeID=LT">Kinh tế đối ngoại</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=404&DepartmentID=03&GraduateLevelID=DH&StudyTypeID=LT">Tài chính - Ngân hàng</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=405&DepartmentID=04&GraduateLevelID=DH&StudyTypeID=LT">Kế toán</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=407&DepartmentID=06&GraduateLevelID=DH&StudyTypeID=LT">Quản trị kinh doanh</a></li>
+                                        
+                                </ul>
+
+                            </li>
+                        </ul>
+                    
+                        <ul id="nav">
+                            <li><a  href="javascript:void()" class=''>Đại học - Liên Trường</a>
+                                <ul style='display: none'>
+                                    
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=432&DepartmentID=01&GraduateLevelID=DH&StudyTypeID=LTR">Kinh doanh nông nghiệp số</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=431&DepartmentID=01&GraduateLevelID=DH&StudyTypeID=LTR">Kinh tế đất đai</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=430&DepartmentID=06&GraduateLevelID=DH&StudyTypeID=LTR">Kinh doanh thương mại Hàn Quốc</a></li>
+                                        
+                                </ul>
+
+                            </li>
+                        </ul>
+                    
+                        <ul id="nav">
+                            <li><a  href="javascript:void()" class=''>Đại học - Song ngành chính quy</a>
+                                <ul style='display: none'>
+                                    
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=402&DepartmentID=02&GraduateLevelID=DH&StudyTypeID=SN">Kinh tế đối ngoại</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=407&DepartmentID=06&GraduateLevelID=DH&StudyTypeID=SN">Quản trị kinh doanh</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=501&DepartmentID=08&GraduateLevelID=DH&StudyTypeID=SN">Luật kinh doanh</a></li>
+                                        
+                                </ul>
+
+                            </li>
+                        </ul>
+                    
+                        <ul id="nav">
+                            <li><a  href="javascript:void()" class=''>Đại học - Trao đổi sinh viên</a>
+                                <ul style='display: none'>
+                                    
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=TDSV&DepartmentID=14&GraduateLevelID=DH&StudyTypeID=TDSV">Chương trình trao đổi sinh viên</a></li>
+                                        
+                                </ul>
+
+                            </li>
+                        </ul>
+                    
+                        <ul id="nav">
+                            <li><a  href="javascript:void()" class=''>Đại học - Bằng 2 Chính quy</a>
+                                <ul style='display: none'>
+                                    
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=403&DepartmentID=01&GraduateLevelID=DH&StudyTypeID=VB2">Kinh tế và Quản lý công</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=402&DepartmentID=02&GraduateLevelID=DH&StudyTypeID=VB2">Kinh tế đối ngoại</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=404&DepartmentID=03&GraduateLevelID=DH&StudyTypeID=VB2">Tài chính - Ngân hàng</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=405&DepartmentID=04&GraduateLevelID=DH&StudyTypeID=VB2">Kế toán</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=407&DepartmentID=06&GraduateLevelID=DH&StudyTypeID=VB2">Quản trị kinh doanh</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=503&DepartmentID=07&GraduateLevelID=DH&StudyTypeID=VB2">Luật Dân sự</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=501&DepartmentID=08&GraduateLevelID=DH&StudyTypeID=VB2">Luật kinh doanh</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=7380107&DepartmentID=08&GraduateLevelID=DH&StudyTypeID=VB2">Luật Kinh tế</a></li>
+                                        
+                                </ul>
+
+                            </li>
+                        </ul>
+                    
+                        <ul id="nav">
+                            <li><a  href="javascript:void()" class=''>Đại học - Bằng 2 Vừa làm vừa học</a>
+                                <ul style='display: none'>
+                                    
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=403&DepartmentID=01&GraduateLevelID=DH&StudyTypeID=VB3">Kinh tế và Quản lý công</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=402&DepartmentID=02&GraduateLevelID=DH&StudyTypeID=VB3">Kinh tế đối ngoại</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=404&DepartmentID=03&GraduateLevelID=DH&StudyTypeID=VB3">Tài chính - Ngân hàng</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=405&DepartmentID=04&GraduateLevelID=DH&StudyTypeID=VB3">Kế toán</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=407&DepartmentID=06&GraduateLevelID=DH&StudyTypeID=VB3">Quản trị kinh doanh</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=7380101&DepartmentID=07&GraduateLevelID=DH&StudyTypeID=VB3">Luật</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=503&DepartmentID=07&GraduateLevelID=DH&StudyTypeID=VB3">Luật Dân sự</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=504&DepartmentID=07&GraduateLevelID=DH&StudyTypeID=VB3">Luật Tài chính - Ngân hàng</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=501&DepartmentID=08&GraduateLevelID=DH&StudyTypeID=VB3">Luật kinh doanh</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=7380107&DepartmentID=08&GraduateLevelID=DH&StudyTypeID=VB3">Luật Kinh tế</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=502&DepartmentID=08&GraduateLevelID=DH&StudyTypeID=VB3">Luật thương mại quốc tế</a></li>
+                                        
+                                </ul>
+
+                            </li>
+                        </ul>
+                    
+                        <ul id="nav">
+                            <li><a  href="javascript:void()" class=''>Đại học - Vừa làm vừa học</a>
+                                <ul style='display: none'>
+                                    
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=403&DepartmentID=01&GraduateLevelID=DH&StudyTypeID=VHVL">Kinh tế và Quản lý công</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=402&DepartmentID=02&GraduateLevelID=DH&StudyTypeID=VHVL">Kinh tế đối ngoại</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=7340205&DepartmentID=03&GraduateLevelID=DH&StudyTypeID=VHVL">Công nghệ tài chính</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=404&DepartmentID=03&GraduateLevelID=DH&StudyTypeID=VHVL">Tài chính - Ngân hàng</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=405&DepartmentID=04&GraduateLevelID=DH&StudyTypeID=VHVL">Kế toán</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=407&DepartmentID=06&GraduateLevelID=DH&StudyTypeID=VHVL">Quản trị kinh doanh</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=7380101&DepartmentID=07&GraduateLevelID=DH&StudyTypeID=VHVL">Luật</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=503&DepartmentID=07&GraduateLevelID=DH&StudyTypeID=VHVL">Luật Dân sự</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=501&DepartmentID=08&GraduateLevelID=DH&StudyTypeID=VHVL">Luật kinh doanh</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=7380107&DepartmentID=08&GraduateLevelID=DH&StudyTypeID=VHVL">Luật Kinh tế</a></li>
+                                        
+                                </ul>
+
+                            </li>
+                        </ul>
+                    
+                        <ul id="nav">
+                            <li><a  href="javascript:void()" class=''>Đại học QT - Quốc tế</a>
+                                <ul style='display: none'>
+                                    
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=1501101&DepartmentID=15&GraduateLevelID=DHQT&StudyTypeID=QT">Kinh doanh Quốc tế</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=1501103&DepartmentID=15&GraduateLevelID=DHQT&StudyTypeID=QT">Quản trị Kinh doanh, chuyên ngành Marketing</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=1501102&DepartmentID=15&GraduateLevelID=DHQT&StudyTypeID=QT">Tài chính Quốc tế</a></li>
+                                        
+                                </ul>
+
+                            </li>
+                        </ul>
+                    
+                        <ul id="nav">
+                            <li><a  href="javascript:void()" class=''>Thạc sĩ - Bổ sung kiến thức cao học</a>
+                                <ul style='display: none'>
+                                    
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=BSKTCH&DepartmentID=19&GraduateLevelID=Th.S&StudyTypeID=BSKTCH">Bổ sung kiến thức kinh tế</a></li>
+                                        
+                                </ul>
+
+                            </li>
+                        </ul>
+                    
+                        <ul id="nav">
+                            <li><a  href="javascript:void()" class=''>Thạc sĩ - SĐH chính quy</a>
+                                <ul style='display: none'>
+                                    
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=603101&DepartmentID=01&GraduateLevelID=Th.S&StudyTypeID=CQKTT">Chuyên ngành Kinh tế chính trị</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=603103&DepartmentID=01&GraduateLevelID=Th.S&StudyTypeID=CQKTT">Chuyên ngành Kinh tế học</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=8310102&DepartmentID=01&GraduateLevelID=Th.S&StudyTypeID=CQKTT">Kinh tế chính trị</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=8310101&DepartmentID=01&GraduateLevelID=Th.S&StudyTypeID=CQKTT">Kinh tế học</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=831010101&DepartmentID=01&GraduateLevelID=Th.S&StudyTypeID=CQKTT">Kinh tế và Quản lý công</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=603107&DepartmentID=02&GraduateLevelID=Th.S&StudyTypeID=CQKTT">Chuyên ngành Kinh tế thế giới và quan hệ kinh tế quốc tế</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=8310106&DepartmentID=02&GraduateLevelID=Th.S&StudyTypeID=CQKTT">Kinh tế quốc tế</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=603112&DepartmentID=03&GraduateLevelID=Th.S&StudyTypeID=CQKTT">Chuyên ngành Kinh tế Tài chính - Ngân hàng</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=8340201&DepartmentID=03&GraduateLevelID=Th.S&StudyTypeID=CQKTT">Tài chính - Ngân hàng</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=8340301&DepartmentID=04&GraduateLevelID=Th.S&StudyTypeID=CQKTT">Kế toán</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=8340122&DepartmentID=05&GraduateLevelID=Th.S&StudyTypeID=CQKTT">Thương mại điện tử</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=603405&DepartmentID=06&GraduateLevelID=Th.S&StudyTypeID=CQKTT">Chuyên ngành Quản trị kinh doanh</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=8340101&DepartmentID=06&GraduateLevelID=Th.S&StudyTypeID=CQKTT">Quản trị kinh doanh</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=8380101&DepartmentID=07&GraduateLevelID=Th.S&StudyTypeID=CQKTT">Luật</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=8380103&DepartmentID=07&GraduateLevelID=Th.S&StudyTypeID=CQKTT">Luật Dân sự và Tố tụng dân sự</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=603850&DepartmentID=08&GraduateLevelID=Th.S&StudyTypeID=CQKTT">Chuyên ngành Luật kinh tế</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=8380107&DepartmentID=08&GraduateLevelID=Th.S&StudyTypeID=CQKTT">Luật Kinh tế</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=SDH01&DepartmentID=19&GraduateLevelID=Th.S&StudyTypeID=CQKTT">Bổ sung kiến thức sau đại học</a></li>
+                                        
+                                </ul>
+
+                            </li>
+                        </ul>
+                    
+                        <ul id="nav">
+                            <li><a  href="javascript:void()" class=''>Thạc sĩ - Liên thông</a>
+                                <ul style='display: none'>
+                                    
+                                </ul>
+
+                            </li>
+                        </ul>
+                    
+                        <ul id="nav">
+                            <li><a  href="javascript:void()" class=''>Thạc sĩ QT - Quốc tế</a>
+                                <ul style='display: none'>
+                                    
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=1502103&DepartmentID=15&GraduateLevelID=Th.SQT&StudyTypeID=QT">Luật Dân sự, chuyên ngành Luật Tài sản Việt - Pháp</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=1502102&DepartmentID=15&GraduateLevelID=Th.SQT&StudyTypeID=QT">Luật, chuyên ngành Luật kinh doanh Pháp - Châu Á</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=1502101&DepartmentID=15&GraduateLevelID=Th.SQT&StudyTypeID=QT">Luật, chuyên ngành Luật Tài sản Việt - Pháp</a></li>
+                                        
+                                </ul>
+
+                            </li>
+                        </ul>
+                    
+                        <ul id="nav">
+                            <li><a  href="javascript:void()" class=''>Tiến sĩ - SĐH chính quy</a>
+                                <ul style='display: none'>
+                                    
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=9310102&DepartmentID=01&GraduateLevelID=TS&StudyTypeID=CQKTT">Kinh tế chính trị</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=9310101&DepartmentID=01&GraduateLevelID=TS&StudyTypeID=CQKTT">Kinh tế học</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=9340201&DepartmentID=03&GraduateLevelID=TS&StudyTypeID=CQKTT">Tài chính - Ngân hàng</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=9340301&DepartmentID=04&GraduateLevelID=TS&StudyTypeID=CQKTT">Kế toán</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=9340101&DepartmentID=06&GraduateLevelID=TS&StudyTypeID=CQKTT">Quản trị kinh doanh</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=9380103&DepartmentID=07&GraduateLevelID=TS&StudyTypeID=CQKTT">Luật Dân sự và Tố tụng dân sự</a></li>
+                                        
+                                            <!-- Default.aspx?PageId=b4893dc7-7e28-4f2f-9804-fde7be948490  -->
+                                            <li><a href="/Default.aspx?ModuleId=f92f39b2-dea3-4185-8cbb-56c1c49c5226&OlogyID=9380107&DepartmentID=08&GraduateLevelID=TS&StudyTypeID=CQKTT">Luật Kinh tế</a></li>
+                                        
+                                </ul>
+
+                            </li>
+                        </ul>
+                    
+                    
+                
+			</div>                
+        </div>
+        
+        
+        <!--Phan PanelBarmenu2-->
+        
+    	
+    </div>
+      
+    
+    <!--end Panel left-->
+    <!--Panel content-->
+ <div class="panelcontent1">
+
+     <div class="comment_show">
+         <div class="topic_main">
+             <img class="home_min" src="/Modules/UIS/images/home_1.png" /><a href="#">Ngành đào tạo</a>
+         </div>
+     </div>
+     <!--Phan topicDisplay-->
+     <div class="topicdisplay_page">
+         <!--Noi dung toppic-->
+         <div class="topicdisplay_content">
+             <table border="0" width="98%" id="table172" cellspacing="0" cellpadding="0">
+			<tr>
+				<td height="8" colspan="4">
+				    <img border="0" src="images/dot.gif" width="1" height="1">
+				</td>
+			</tr>
+			<tr>
+				<td height="22" align="right" width="150px" class="contentnews">
+				    Hệ đào tạo : 
+				</td>
+				<td width='250px'>
+				    <select name="ctl11$ddlGraduateLevelID" id="ctl11_ddlGraduateLevelID" class="contentnews">
+					<option selected="selected" value="DH">Đại học</option>
+					<option value="DHQT">Đại học QT</option>
+					<option value="Th.S">Thạc sĩ</option>
+					<option value="Th.SQT">Thạc sĩ QT</option>
+					<option value="TS">Tiến sĩ</option>
+
+				</select>
+				</td>
+				<td height="22" align="right" width="150px" class="contentnews">
+				    Loại hình đào tạo : </td>
+				<td width='250px'>
+				    <select name="ctl11$ddlStudyTypeID" id="ctl11_ddlStudyTypeID" class="contentnews">
+					<option value="BSKTCH">Bổ sung kiến thức cao học</option>
+					<option value="BSKTNCS">Bổ sung kiến thức NCS</option>
+					<option selected="selected" value="CQ">Ch&#237;nh quy</option>
+					<option value="CQKTT">SĐH ch&#237;nh quy</option>
+					<option value="DTTX">Đ&#224;o tạo từ xa</option>
+					<option value="KCQ">Kh&#244;ng ch&#237;nh quy</option>
+					<option value="LT">Li&#234;n th&#244;ng</option>
+					<option value="LTR">Li&#234;n Trường</option>
+					<option value="QT">Quốc tế</option>
+					<option value="SN">Song ng&#224;nh ch&#237;nh quy</option>
+					<option value="TDSV">Trao đổi sinh vi&#234;n</option>
+					<option value="VB2">Bằng 2 Ch&#237;nh quy</option>
+					<option value="VB3">Bằng 2 Vừa l&#224;m vừa học</option>
+					<option value="VHVL">Vừa l&#224;m vừa học</option>
+
+				</select>
+				    
+				</td>
+			</tr>
+			<tr>
+				<td height="22" align="right"  class="contentnews">
+				    Khoa quản lý : </td>
+				<td>
+				    <select name="ctl11$ddlDepartmentID" id="ctl11_ddlDepartmentID" class="contentnews">
+					<option selected="selected" value="05">Khoa Hệ thống th&#244;ng tin</option>
+					<option value="04">Khoa Kế to&#225;n - Kiểm to&#225;n</option>
+					<option value="01">Khoa Kinh tế</option>
+					<option value="02">Khoa Kinh tế đối ngoại</option>
+					<option value="07">Khoa Luật</option>
+					<option value="08">Khoa Luật Kinh tế</option>
+					<option value="06">Khoa Quản trị kinh doanh</option>
+					<option value="03">Khoa T&#224;i ch&#237;nh - Ng&#226;n h&#224;ng</option>
+					<option value="11">Khoa To&#225;n Kinh tế</option>
+					<option value="14">Ph&#242;ng Đ&#224;o tạo</option>
+					<option value="15">Ph&#242;ng Hợp t&#225;c ph&#225;t triển</option>
+					<option value="19">Ph&#242;ng Sau đại học v&#224; Khoa học c&#244;ng nghệ</option>
+
+				</select>
+				</td>
+				<td height="22" align="right"  class="contentnews">
+				    Ngành đào tạo : </td>
+				<td>
+				    <select name="ctl11$ddlOlogyID" id="ctl11_ddlOlogyID" class="contentnews">
+					<option value="406">Hệ thống th&#244;ng tin quản l&#253;</option>
+					<option value="7340405">Hệ thống th&#244;ng tin quản l&#253;</option>
+					<option value="406H">Hệ thống th&#244;ng tin quản l&#253; (Chương tr&#236;nh Co-operative Education)</option>
+					<option value="406C">Hệ thống th&#244;ng tin quản l&#253; Chất lượng cao</option>
+					<option value="416">Kinh doanh số v&#224; Tr&#237; tuệ nh&#226;n tạo</option>
+					<option value="416C">Kinh doanh số v&#224; Tr&#237; tuệ nh&#226;n tạo Chất lượng cao</option>
+					<option value="411">Thương mại điện tử</option>
+					<option value="411*">Thương mại điện tử</option>
+					<option value="7340122">Thương mại điện tử</option>
+					<option selected="selected" value="411E">Thương mại điện tử (Tiếng Anh)</option>
+					<option value="411C">Thương mại điện tử Chất lượng cao</option>
+					<option value="411CA">Thương mại điện tử Chất lượng cao bằng tiếng Anh</option>
+
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<td height="22" align="right"  class="contentnews" >
+				    Khóa học : </td>
+				<td>
+				    <select name="ctl11$ddlCourse" id="ctl11_ddlCourse" class="contentnews">
+					<option selected="selected" value="K24">Kh&#243;a 24</option>
+					<option value="K23">Kh&#243;a 23</option>
+
+				</select>
+				</td>
+				<td height="22" align="right"  class="contentnews" >
+				    Chương trình đào tạo : </td>
+				<td>
+				    <select name="ctl11$ddlStudyprogram" id="ctl11_ddlStudyprogram" class="contentnews">
+					<option selected="selected" value="K24411E">Thương mại đi&#234;̣n tử (Ti&#234;́ng Anh) Khoá 24</option>
+					<option value="K24411ENGANH2">Thương mại đi&#234;̣n tử (Ti&#234;́ng Anh) Khoá 24 - Ng&#224;nh 2</option>
+					<option value="K24411TE">CNTN_Thương mại điện tử (Tiếng Anh) kh&#243;a 24</option>
+
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<td height="22" colspan="4" align="left"> &nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td height="22" colspan="4" align="left">
+				   <table id="ctl11_dtlSemester" cellspacing="0" border="0" width="100%">
+					<tr>
+						<td>
+                        <span id="ctl11_dtlSemester_ctl00_lblGraduateStudyType" class="title">Học kỳ 1</span><br />
+			            <div>
+							<table cellspacing="0" cellpadding="4" border="1" border="0" id="ctl11_dtlSemester_ctl00_grvHocphan" width="100%">
+								<tr align="center" bgcolor="#507CD1">
+									<th scope="col"><font color="White" size="2"><b>STT</b></font></th><th scope="col"><font color="White" size="2"><b>Mã học phần</b></font></th><th scope="col"><font color="White" size="2"><b>Tên học phần</b></font></th><th scope="col"><font color="White" size="2"><b>Số tín chỉ</b></font></th><th scope="col"><font color="White" size="2"><b>Loại học phần</b></font></th>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl00_grvHocphan_ctl02_lblOrder" style="display:inline-block;">1</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl00_grvHocphan_ctl02_lblCurriculumID" style="display:inline-block;">BDG1012</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl00_grvHocphan_ctl02_lblCurriculumName" style="display:inline-block;">Giáo dục thể chất 1</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl00_grvHocphan_ctl02_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl00_grvHocphan_ctl02_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl00_grvHocphan_ctl03_lblOrder" style="display:inline-block;">2</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl00_grvHocphan_ctl03_lblCurriculumID" style="display:inline-block;">EEE1037</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl00_grvHocphan_ctl03_lblCurriculumName" style="display:inline-block;">Kinh tế vi mô</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl00_grvHocphan_ctl03_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl00_grvHocphan_ctl03_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl00_grvHocphan_ctl04_lblOrder" style="display:inline-block;">3</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl00_grvHocphan_ctl04_lblCurriculumID" style="display:inline-block;">EIE4009</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl00_grvHocphan_ctl04_lblCurriculumName" style="display:inline-block;">Giới thiệu ngành thương mại điện tử</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl00_grvHocphan_ctl04_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl00_grvHocphan_ctl04_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl00_grvHocphan_ctl05_lblOrder" style="display:inline-block;">4</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl00_grvHocphan_ctl05_lblCurriculumID" style="display:inline-block;">EIM3049</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl00_grvHocphan_ctl05_lblCurriculumName" style="display:inline-block;">Tư duy lập trình</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl00_grvHocphan_ctl05_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl00_grvHocphan_ctl05_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl00_grvHocphan_ctl06_lblOrder" style="display:inline-block;">5</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl00_grvHocphan_ctl06_lblCurriculumID" style="display:inline-block;">EMM2024</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl00_grvHocphan_ctl06_lblCurriculumName" style="display:inline-block;">Toán kinh tế</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl00_grvHocphan_ctl06_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl00_grvHocphan_ctl06_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr>
+							</table>
+						</div>
+                   </td>
+					</tr><tr>
+						<td>
+                        <span id="ctl11_dtlSemester_ctl01_lblGraduateStudyType" class="title">Học kỳ 2</span><br />
+			            <div>
+							<table cellspacing="0" cellpadding="4" border="1" border="0" id="ctl11_dtlSemester_ctl01_grvHocphan" width="100%">
+								<tr align="center" bgcolor="#507CD1">
+									<th scope="col"><font color="White" size="2"><b>STT</b></font></th><th scope="col"><font color="White" size="2"><b>Mã học phần</b></font></th><th scope="col"><font color="White" size="2"><b>Tên học phần</b></font></th><th scope="col"><font color="White" size="2"><b>Số tín chỉ</b></font></th><th scope="col"><font color="White" size="2"><b>Loại học phần</b></font></th>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl02_lblOrder" style="display:inline-block;">1</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl02_lblCurriculumID" style="display:inline-block;">BDG1013</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl02_lblCurriculumName" style="display:inline-block;">Giáo dục thể chất 2</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl02_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl02_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl03_lblOrder" style="display:inline-block;">2</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl03_lblCurriculumID" style="display:inline-block;">EAA2028</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl03_lblCurriculumName" style="display:inline-block;">Nguyên lý kế toán</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl03_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl03_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl04_lblOrder" style="display:inline-block;">3</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl04_lblCurriculumID" style="display:inline-block;">EEE1038</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl04_lblCurriculumName" style="display:inline-block;">Kinh tế vĩ mô</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl04_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl04_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl05_lblOrder" style="display:inline-block;">4</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl05_lblCurriculumID" style="display:inline-block;">EIE5019</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl05_lblCurriculumName" style="display:inline-block;">Kỹ thuật lập trình</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl05_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl05_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl06_lblOrder" style="display:inline-block;">5</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl06_lblCurriculumID" style="display:inline-block;">EDG1006</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl06_lblCurriculumName" style="display:inline-block;">Tâm lý ứng dụng</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl06_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl06_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl07_lblOrder" style="display:inline-block;">6</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl07_lblCurriculumID" style="display:inline-block;">EDG1007</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl07_lblCurriculumName" style="display:inline-block;">Khoa học giao tiếp</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl07_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl07_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl08_lblOrder" style="display:inline-block;">7</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl08_lblCurriculumID" style="display:inline-block;">EDG1008</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl08_lblCurriculumName" style="display:inline-block;">Xã hội học</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl08_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl08_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl09_lblOrder" style="display:inline-block;">8</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl09_lblCurriculumID" style="display:inline-block;">EDG1009</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl09_lblCurriculumName" style="display:inline-block;">Quan hệ quốc tế</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl09_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl09_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl10_lblOrder" style="display:inline-block;">9</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl10_lblCurriculumID" style="display:inline-block;">EDG1010</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl10_lblCurriculumName" style="display:inline-block;">Văn hóa học</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl10_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl01_grvHocphan_ctl10_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr>
+							</table>
+						</div>
+                   </td>
+					</tr><tr>
+						<td>
+                        <span id="ctl11_dtlSemester_ctl02_lblGraduateStudyType" class="title">Học kỳ 3</span><br />
+			            <div>
+							<table cellspacing="0" cellpadding="4" border="1" border="0" id="ctl11_dtlSemester_ctl02_grvHocphan" width="100%">
+								<tr align="center" bgcolor="#507CD1">
+									<th scope="col"><font color="White" size="2"><b>STT</b></font></th><th scope="col"><font color="White" size="2"><b>Mã học phần</b></font></th><th scope="col"><font color="White" size="2"><b>Tên học phần</b></font></th><th scope="col"><font color="White" size="2"><b>Số tín chỉ</b></font></th><th scope="col"><font color="White" size="2"><b>Loại học phần</b></font></th>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl02_lblOrder" style="display:inline-block;">1</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl02_lblCurriculumID" style="display:inline-block;">BDG1014</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl02_lblCurriculumName" style="display:inline-block;">Giáo dục quốc phòng</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl02_lblCredits" style="display:inline-block;">5.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl02_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl03_lblOrder" style="display:inline-block;">2</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl03_lblCurriculumID" style="display:inline-block;">EBB1067</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl03_lblCurriculumName" style="display:inline-block;">Quản trị học</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl03_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl03_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl04_lblOrder" style="display:inline-block;">3</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl04_lblCurriculumID" style="display:inline-block;">EFF2044</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl04_lblCurriculumName" style="display:inline-block;">Nguyên lý thị trường tài chính</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl04_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl04_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl05_lblOrder" style="display:inline-block;">4</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl05_lblCurriculumID" style="display:inline-block;">EIE3004</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl05_lblCurriculumName" style="display:inline-block;">Cơ sở dữ liệu</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl05_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl05_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl06_lblOrder" style="display:inline-block;">5</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl06_lblCurriculumID" style="display:inline-block;">ELB1048</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl06_lblCurriculumName" style="display:inline-block;">Nhập môn luật học</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl06_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl06_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl07_lblOrder" style="display:inline-block;">6</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl07_lblCurriculumID" style="display:inline-block;">EBB1068</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl07_lblCurriculumName" style="display:inline-block;">Kỹ năng lãnh đạo (Leadership)</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl07_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl07_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl08_lblOrder" style="display:inline-block;">7</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl08_lblCurriculumID" style="display:inline-block;">EBM1065</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl08_lblCurriculumName" style="display:inline-block;">Sáng tạo và khởi nghiệp</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl08_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl08_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl09_lblOrder" style="display:inline-block;">8</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl09_lblCurriculumID" style="display:inline-block;">EDG1011</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl09_lblCurriculumName" style="display:inline-block;">Logic học</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl09_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl09_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl10_lblOrder" style="display:inline-block;">9</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl10_lblCurriculumID" style="display:inline-block;">EFF1047</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl10_lblCurriculumName" style="display:inline-block;">Tài chính cá nhân</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl10_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl10_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl11_lblOrder" style="display:inline-block;">10</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl11_lblCurriculumID" style="display:inline-block;">EIE1051</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl11_lblCurriculumName" style="display:inline-block;">Công nghệ thông tin và truyền thông mới (New ICT)</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl11_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl02_grvHocphan_ctl11_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr>
+							</table>
+						</div>
+                   </td>
+					</tr><tr>
+						<td>
+                        <span id="ctl11_dtlSemester_ctl03_lblGraduateStudyType" class="title">Học kỳ 4</span><br />
+			            <div>
+							<table cellspacing="0" cellpadding="4" border="1" border="0" id="ctl11_dtlSemester_ctl03_grvHocphan" width="100%">
+								<tr align="center" bgcolor="#507CD1">
+									<th scope="col"><font color="White" size="2"><b>STT</b></font></th><th scope="col"><font color="White" size="2"><b>Mã học phần</b></font></th><th scope="col"><font color="White" size="2"><b>Tên học phần</b></font></th><th scope="col"><font color="White" size="2"><b>Số tín chỉ</b></font></th><th scope="col"><font color="White" size="2"><b>Loại học phần</b></font></th>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl02_lblOrder" style="display:inline-block;">1</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl02_lblCurriculumID" style="display:inline-block;">EAA2029</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl02_lblCurriculumName" style="display:inline-block;">Kế toán tài chính</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl02_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl02_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl03_lblOrder" style="display:inline-block;">2</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl03_lblCurriculumID" style="display:inline-block;">EBM2066</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl03_lblCurriculumName" style="display:inline-block;">Marketing</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl03_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl03_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl04_lblOrder" style="display:inline-block;">3</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl04_lblCurriculumID" style="display:inline-block;">EIE4040</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl04_lblCurriculumName" style="display:inline-block;">Thiết kế đồ họa và đa phương tiện</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl04_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl04_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl05_lblOrder" style="display:inline-block;">4</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl05_lblCurriculumID" style="display:inline-block;">EIM2050</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl05_lblCurriculumName" style="display:inline-block;">Hệ thống thông tin kinh doanh</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl05_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl05_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl06_lblOrder" style="display:inline-block;">5</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl06_lblCurriculumID" style="display:inline-block;">EIM5020</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl06_lblCurriculumName" style="display:inline-block;">Nền tảng công nghệ cho hệ thống thông tin</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl06_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl06_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl07_lblOrder" style="display:inline-block;">6</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl07_lblCurriculumID" style="display:inline-block;">EMA2022</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl07_lblCurriculumName" style="display:inline-block;">Thống kê trong kinh doanh</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl07_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl07_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl08_lblOrder" style="display:inline-block;">7</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl08_lblCurriculumID" style="display:inline-block;">EIE5032</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl08_lblCurriculumName" style="display:inline-block;">Phương pháp nghiên cứu liên ngành</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl08_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl08_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl09_lblOrder" style="display:inline-block;">8</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl09_lblCurriculumID" style="display:inline-block;">ERE2030</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl09_lblCurriculumName" style="display:inline-block;">Kinh tế quốc tế</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl09_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl03_grvHocphan_ctl09_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr>
+							</table>
+						</div>
+                   </td>
+					</tr><tr>
+						<td>
+                        <span id="ctl11_dtlSemester_ctl04_lblGraduateStudyType" class="title">Học kỳ 5</span><br />
+			            <div>
+							<table cellspacing="0" cellpadding="4" border="1" border="0" id="ctl11_dtlSemester_ctl04_grvHocphan" width="100%">
+								<tr align="center" bgcolor="#507CD1">
+									<th scope="col"><font color="White" size="2"><b>STT</b></font></th><th scope="col"><font color="White" size="2"><b>Mã học phần</b></font></th><th scope="col"><font color="White" size="2"><b>Tên học phần</b></font></th><th scope="col"><font color="White" size="2"><b>Số tín chỉ</b></font></th><th scope="col"><font color="White" size="2"><b>Loại học phần</b></font></th>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl02_lblOrder" style="display:inline-block;">1</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl02_lblCurriculumID" style="display:inline-block;">BDG1001</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl02_lblCurriculumName" style="display:inline-block;">Triết học Mác – Lênin</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl02_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl02_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl03_lblOrder" style="display:inline-block;">2</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl03_lblCurriculumID" style="display:inline-block;">EFF2045</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl03_lblCurriculumName" style="display:inline-block;">Quản trị tài chính</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl03_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl03_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl04_lblOrder" style="display:inline-block;">3</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl04_lblCurriculumID" style="display:inline-block;">EIM5022</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl04_lblCurriculumName" style="display:inline-block;">Phân tích và thiết kế hệ thống thông tin</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl04_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl04_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl05_lblOrder" style="display:inline-block;">4</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl05_lblCurriculumID" style="display:inline-block;">EKB1046</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl05_lblCurriculumName" style="display:inline-block;">Luật doanh nghiệp</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl05_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl05_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl06_lblOrder" style="display:inline-block;">5</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl06_lblCurriculumID" style="display:inline-block;">EIE5038</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl06_lblCurriculumName" style="display:inline-block;">Quản trị quan hệ khách hàng điện tử</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl06_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl06_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl07_lblOrder" style="display:inline-block;">6</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl07_lblCurriculumID" style="display:inline-block;">EIE5045</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl07_lblCurriculumName" style="display:inline-block;">Tích hợp quy trình kinh doanh với các hệ thống ERP 1</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl07_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl07_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl08_lblOrder" style="display:inline-block;">7</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl08_lblCurriculumID" style="display:inline-block;">EIM5018</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl08_lblCurriculumName" style="display:inline-block;">Kỹ thuật kiểm thử phần mềm</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl08_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl08_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl09_lblOrder" style="display:inline-block;">8</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl09_lblCurriculumID" style="display:inline-block;">EIM5026</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl09_lblCurriculumName" style="display:inline-block;">Phân tích marketing số</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl09_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl04_grvHocphan_ctl09_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr>
+							</table>
+						</div>
+                   </td>
+					</tr><tr>
+						<td>
+                        <span id="ctl11_dtlSemester_ctl05_lblGraduateStudyType" class="title">Học kỳ 6</span><br />
+			            <div>
+							<table cellspacing="0" cellpadding="4" border="1" border="0" id="ctl11_dtlSemester_ctl05_grvHocphan" width="100%">
+								<tr align="center" bgcolor="#507CD1">
+									<th scope="col"><font color="White" size="2"><b>STT</b></font></th><th scope="col"><font color="White" size="2"><b>Mã học phần</b></font></th><th scope="col"><font color="White" size="2"><b>Tên học phần</b></font></th><th scope="col"><font color="White" size="2"><b>Số tín chỉ</b></font></th><th scope="col"><font color="White" size="2"><b>Loại học phần</b></font></th>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl02_lblOrder" style="display:inline-block;">1</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl02_lblCurriculumID" style="display:inline-block;">BEE1002</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl02_lblCurriculumName" style="display:inline-block;">Kinh tế chính trị Mác – Lênin</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl02_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl02_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl03_lblOrder" style="display:inline-block;">2</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl03_lblCurriculumID" style="display:inline-block;">EIE5030</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl03_lblCurriculumName" style="display:inline-block;">Phát triển web kinh doanh</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl03_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl03_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl04_lblOrder" style="display:inline-block;">3</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl04_lblCurriculumID" style="display:inline-block;">EIE5043</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl04_lblCurriculumName" style="display:inline-block;">Thương mại điện tử</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl04_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl04_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl05_lblOrder" style="display:inline-block;">4</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl05_lblCurriculumID" style="display:inline-block;">EMA2025</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl05_lblCurriculumName" style="display:inline-block;">Phân tích dữ liệu</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl05_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl05_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl06_lblOrder" style="display:inline-block;">5</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl06_lblCurriculumID" style="display:inline-block;">EBB5027</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl06_lblCurriculumName" style="display:inline-block;">Nghệ thuật lãnh đạo</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl06_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl06_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl07_lblOrder" style="display:inline-block;">6</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl07_lblCurriculumID" style="display:inline-block;">EIE4025</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl07_lblCurriculumName" style="display:inline-block;">Phân tích dữ liệu web</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl07_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl07_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl08_lblOrder" style="display:inline-block;">7</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl08_lblCurriculumID" style="display:inline-block;">EIE4044</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl08_lblCurriculumName" style="display:inline-block;">Thương mại trên mạng xã hội</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl08_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl08_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl09_lblOrder" style="display:inline-block;">8</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl09_lblCurriculumID" style="display:inline-block;">EIE5003</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl09_lblCurriculumName" style="display:inline-block;">Chuyển đổi số trong kinh doanh</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl09_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl09_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl10_lblOrder" style="display:inline-block;">9</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl10_lblCurriculumID" style="display:inline-block;">EIM5017</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl10_lblCurriculumName" style="display:inline-block;">Hợp đồng thông minh và công nghệ Blockchain</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl10_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl10_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl11_lblOrder" style="display:inline-block;">10</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl11_lblCurriculumID" style="display:inline-block;">EIM5024</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl11_lblCurriculumName" style="display:inline-block;">Phân tích dữ liệu nâng cao</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl11_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl05_grvHocphan_ctl11_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr>
+							</table>
+						</div>
+                   </td>
+					</tr><tr>
+						<td>
+                        <span id="ctl11_dtlSemester_ctl06_lblGraduateStudyType" class="title">Học kỳ 7</span><br />
+			            <div>
+							<table cellspacing="0" cellpadding="4" border="1" border="0" id="ctl11_dtlSemester_ctl06_grvHocphan" width="100%">
+								<tr align="center" bgcolor="#507CD1">
+									<th scope="col"><font color="White" size="2"><b>STT</b></font></th><th scope="col"><font color="White" size="2"><b>Mã học phần</b></font></th><th scope="col"><font color="White" size="2"><b>Tên học phần</b></font></th><th scope="col"><font color="White" size="2"><b>Số tín chỉ</b></font></th><th scope="col"><font color="White" size="2"><b>Loại học phần</b></font></th>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl02_lblOrder" style="display:inline-block;">1</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl02_lblCurriculumID" style="display:inline-block;">BDG1003</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl02_lblCurriculumName" style="display:inline-block;">Chủ nghĩa xã hội khoa học</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl02_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl02_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl03_lblOrder" style="display:inline-block;">2</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl03_lblCurriculumID" style="display:inline-block;">EIE4005</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl03_lblCurriculumName" style="display:inline-block;">Công nghệ marketing</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl03_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl03_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl04_lblOrder" style="display:inline-block;">3</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl04_lblCurriculumID" style="display:inline-block;">EIE4033</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl04_lblCurriculumName" style="display:inline-block;">Quản lý chuỗi cung ứng trong thương mại điện tử</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl04_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl04_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl05_lblOrder" style="display:inline-block;">4</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl05_lblCurriculumID" style="display:inline-block;">EIE5031</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl05_lblCurriculumName" style="display:inline-block;">Phát triển web kinh doanh nâng cao</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl05_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl05_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl06_lblOrder" style="display:inline-block;">5</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl06_lblCurriculumID" style="display:inline-block;">EMA2023</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl06_lblCurriculumName" style="display:inline-block;">Kinh tế lượng</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl06_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl06_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl07_lblOrder" style="display:inline-block;">6</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl07_lblCurriculumID" style="display:inline-block;">EUU6102</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl07_lblCurriculumName" style="display:inline-block;">Kiến tập</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl07_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl07_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl08_lblOrder" style="display:inline-block;">7</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl08_lblCurriculumID" style="display:inline-block;">EIM4014</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl08_lblCurriculumName" style="display:inline-block;">Học máy (Machine Learning) trong phân tích kinh doanh</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl08_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl08_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl09_lblOrder" style="display:inline-block;">8</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl09_lblCurriculumID" style="display:inline-block;">EIM5006</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl09_lblCurriculumName" style="display:inline-block;">Giải pháp AI trong kinh doanh và quản lý</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl09_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl06_grvHocphan_ctl09_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr>
+							</table>
+						</div>
+                   </td>
+					</tr><tr>
+						<td>
+                        <span id="ctl11_dtlSemester_ctl07_lblGraduateStudyType" class="title">Học kỳ 8</span><br />
+			            <div>
+							<table cellspacing="0" cellpadding="4" border="1" border="0" id="ctl11_dtlSemester_ctl07_grvHocphan" width="100%">
+								<tr align="center" bgcolor="#507CD1">
+									<th scope="col"><font color="White" size="2"><b>STT</b></font></th><th scope="col"><font color="White" size="2"><b>Mã học phần</b></font></th><th scope="col"><font color="White" size="2"><b>Tên học phần</b></font></th><th scope="col"><font color="White" size="2"><b>Số tín chỉ</b></font></th><th scope="col"><font color="White" size="2"><b>Loại học phần</b></font></th>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl07_grvHocphan_ctl02_lblOrder" style="display:inline-block;">1</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl07_grvHocphan_ctl02_lblCurriculumID" style="display:inline-block;">BDG1004</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl07_grvHocphan_ctl02_lblCurriculumName" style="display:inline-block;">Tư tưởng Hồ Chí Minh</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl07_grvHocphan_ctl02_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl07_grvHocphan_ctl02_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl07_grvHocphan_ctl03_lblOrder" style="display:inline-block;">2</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl07_grvHocphan_ctl03_lblCurriculumID" style="display:inline-block;">EIE4036</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl07_grvHocphan_ctl03_lblCurriculumName" style="display:inline-block;">Quản trị bán lẻ trực tuyến</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl07_grvHocphan_ctl03_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl07_grvHocphan_ctl03_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl07_grvHocphan_ctl04_lblOrder" style="display:inline-block;">3</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl07_grvHocphan_ctl04_lblCurriculumID" style="display:inline-block;">EIE4039</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl07_grvHocphan_ctl04_lblCurriculumName" style="display:inline-block;">Thanh toán điện tử</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl07_grvHocphan_ctl04_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl07_grvHocphan_ctl04_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl07_grvHocphan_ctl05_lblOrder" style="display:inline-block;">4</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl07_grvHocphan_ctl05_lblCurriculumID" style="display:inline-block;">EIE5028</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl07_grvHocphan_ctl05_lblCurriculumName" style="display:inline-block;">Phát triển thương mại di động</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl07_grvHocphan_ctl05_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl07_grvHocphan_ctl05_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr>
+							</table>
+						</div>
+                   </td>
+					</tr><tr>
+						<td>
+                        <span id="ctl11_dtlSemester_ctl08_lblGraduateStudyType" class="title">Học kỳ 9</span><br />
+			            <div>
+							<table cellspacing="0" cellpadding="4" border="1" border="0" id="ctl11_dtlSemester_ctl08_grvHocphan" width="100%">
+								<tr align="center" bgcolor="#507CD1">
+									<th scope="col"><font color="White" size="2"><b>STT</b></font></th><th scope="col"><font color="White" size="2"><b>Mã học phần</b></font></th><th scope="col"><font color="White" size="2"><b>Tên học phần</b></font></th><th scope="col"><font color="White" size="2"><b>Số tín chỉ</b></font></th><th scope="col"><font color="White" size="2"><b>Loại học phần</b></font></th>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl08_grvHocphan_ctl02_lblOrder" style="display:inline-block;">1</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl08_grvHocphan_ctl02_lblCurriculumID" style="display:inline-block;">BDG1005</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl08_grvHocphan_ctl02_lblCurriculumName" style="display:inline-block;">Lịch sử Đảng cộng sản Việt Nam</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl08_grvHocphan_ctl02_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl08_grvHocphan_ctl02_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl08_grvHocphan_ctl03_lblOrder" style="display:inline-block;">2</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl08_grvHocphan_ctl03_lblCurriculumID" style="display:inline-block;">EIM5001</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl08_grvHocphan_ctl03_lblCurriculumName" style="display:inline-block;">An toàn và bảo mật Hệ thống thông tin</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl08_grvHocphan_ctl03_lblCredits" style="display:inline-block;">3.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl08_grvHocphan_ctl03_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl08_grvHocphan_ctl04_lblOrder" style="display:inline-block;">3</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl08_grvHocphan_ctl04_lblCurriculumID" style="display:inline-block;">EUU6103</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl08_grvHocphan_ctl04_lblCurriculumName" style="display:inline-block;">Thực tập cuối khóa</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl08_grvHocphan_ctl04_lblCredits" style="display:inline-block;">4.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl08_grvHocphan_ctl04_lblCurriculumTypeName" style="display:inline-block;">Bắt Buộc</span>
+                            </font></td>
+								</tr>
+							</table>
+						</div>
+                   </td>
+					</tr><tr>
+						<td>
+                        <span id="ctl11_dtlSemester_ctl09_lblGraduateStudyType" class="title">Học kỳ 10</span><br />
+			            <div>
+							<table cellspacing="0" cellpadding="4" border="1" border="0" id="ctl11_dtlSemester_ctl09_grvHocphan" width="100%">
+								<tr align="center" bgcolor="#507CD1">
+									<th scope="col"><font color="White" size="2"><b>STT</b></font></th><th scope="col"><font color="White" size="2"><b>Mã học phần</b></font></th><th scope="col"><font color="White" size="2"><b>Tên học phần</b></font></th><th scope="col"><font color="White" size="2"><b>Số tín chỉ</b></font></th><th scope="col"><font color="White" size="2"><b>Loại học phần</b></font></th>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl09_grvHocphan_ctl02_lblOrder" style="display:inline-block;">1</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl09_grvHocphan_ctl02_lblCurriculumID" style="display:inline-block;">EIE4048</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl09_grvHocphan_ctl02_lblCurriculumName" style="display:inline-block;">Chuyên đề: Tự động hóa quy trình bằng robot trong thương mại điện tử</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl09_grvHocphan_ctl02_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl09_grvHocphan_ctl02_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="White">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl09_grvHocphan_ctl03_lblOrder" style="display:inline-block;">2</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl09_grvHocphan_ctl03_lblCurriculumID" style="display:inline-block;">EIM4034</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl09_grvHocphan_ctl03_lblCurriculumName" style="display:inline-block;">Chuyên đề: Quản lý dự án hệ thống thông tin</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl09_grvHocphan_ctl03_lblCredits" style="display:inline-block;">2.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl09_grvHocphan_ctl03_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr><tr align="left" bgcolor="#EFF3FB">
+									<td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl09_grvHocphan_ctl04_lblOrder" style="display:inline-block;">3</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl09_grvHocphan_ctl04_lblCurriculumID" style="display:inline-block;">EUU6101</span>
+                            </font></td><td align="left"><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl09_grvHocphan_ctl04_lblCurriculumName" style="display:inline-block;">Khóa luận tốt nghiệp</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl09_grvHocphan_ctl04_lblCredits" style="display:inline-block;">4.00</span>
+                            </font></td><td><font color="#333333" size="2">
+                                <span id="ctl11_dtlSemester_ctl09_grvHocphan_ctl04_lblCurriculumTypeName" style="display:inline-block;">Tự Chọn</span>
+                            </font></td>
+								</tr>
+							</table>
+						</div>
+                   </td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+         </div>
+         <!--End topicdisplay_content-->
+     </div>
+     <!--topicdisplay_page-->
+
+
+
+ </div>
+    <!--end Panel content-->
+
+ </div>
+ <!--end container-->
+
+			</div>
+		</div></td>
+	</tr><tr>
+		<td colspan="1"><div id="pnBottom">
+			<div id="pnBottomDisplay" style="width:1000px;float:left">
+				<div id='portlet_596800c3-76bd-4e35-ad41-ba82e4d0b5a4' style="float:left;width:1000px;"><div>
+					<div class="footer">
+<div class="banquyen">
+<p>Bản quyền &copy; 2014 thuộc Trường Đại học Kinh tế - Luật.</p>
+<p>Số 669 Đường Quốc lộ 1, Khu phố 3, Phường Linh Xu&acirc;n, Quận Thủ Đức, TP. Hồ Ch&iacute; Minh.</p>
+<br />
+</div>
+<!--End ban quyen-->
+<div class="uel">
+</div>
+<!--End uel-->
+</div>
+
+				</div></div>
+			</div>
+		</div></td>
+	</tr>
+</table>
+        </div>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindowManager, {"clientStateFieldID":"RadWindowManager1_ClientState","formID":"form1","iconUrl":"","minimizeIconUrl":"","name":"RadWindowManager1","skin":"Default","windowControls":"[]"}, null, null, $get("RadWindowManager1"));
+});
+//]]>
+</script>
+</form>
+	<div id="id_div_ordernow" style="display:none">
+	<img border="0" src="/Resources/Images/loading.gif"><br>
+	Đang tải dữ liệu...
+	</div>
+
+</body>
+</html>
